@@ -11,7 +11,12 @@
         hr{color: maroon;width: 75%;}
         p{color: olive;font-family: 'cursive';border: 5px solid green;padding: 1%;text-align: justify;width:80%;background-color: whitesmoke;}
         img{width: 40%; border: 5px ridge red;float: left;padding: 1%;margin: 1%;}
-
+        div#one{background-color: lime; padding-bottom: 20px;}
+        div#two{background-color: purple; padding-bottom: 20px;}
+        div#three{background-color: magenta; padding-bottom: 20px;}
+        .big {font-size: 2em;}
+        p#tiger{background: url(photo.JPG) fixed center repeat;
+        margin-right: auto; margin-left: auto; opacity: 0.9;}
     </style>
     
 </head>
@@ -20,35 +25,38 @@
     <!-- This is how we write a comment in HTML -->
     <!-- Less than, exclamation, two dashes at the start -->
     <!-- Two dashes and greater than at the end -->
-    
+
 	<h1> This line demonstrates H1 </h1>
 	<h2> This line demonstrates H2 </h2>
 	<h3> This line shows how H3 will be different from H1 and H2 </h3>
 
 	<hr />
-    
-	<h1>Quote One from Winston Churchill </h1>
-	<p> 
-        Criticism may not be agreeable, but it is necessary. 
-	    It fulfils the same function as pain in the human body. 
-	    It calls attention to an unhealthy state of things. 
-    </p>
-    
-	<h3>Quote Two from Winston Churchill </h3>
-	
-    <p>
-        Courage is rightly esteemed the first of human qualities... because it is 
-        the quality which guarantees all others. Courage is what it takes to stand up 
-        and speak; courage is also what it takes to sit down and listen. 
-    </p>
-    
-    
-	<h2> Quote Three from Winston Churchill</h2> 
-	<h3> This paragraph will have a border</h3>
-    <p> 
-        Continuous effort - not strength or intelligence - is the key to unlocking 
-        our potential. 
-    </p>
+    <div id="one">
+        <h1>Quote One from<span class="big">W</span>inston <u><span style="color:yellow">Churchill</span> </u></h1>
+        <p> 
+            Criticism may not be agreeable, but it is necessary. 
+            It fulfils the same function as pain in the human body. 
+            It calls attention to an unhealthy state of things. 
+        </p>
+    </div>
+
+    <div id="two">
+        <h3>Quote Two from<span class="big">W</span>inston <u><span style="color:yellow">Churchill</span> </u> </h3>
+        
+        <p>
+            Courage is rightly esteemed the first of human qualities... because it is 
+            the quality which guarantees all others. Courage is what it takes to stand up 
+            and speak; courage is also what it takes to sit down and listen. 
+        </p>
+    </div>
+    <div id="three">
+        <h2> Quote Three from<span class="big">W</span>inston <u><span style="color:yellow">Churchill</span> </u></h2> 
+        <h3> This paragraph will have a border</h3>
+        <p> 
+            Continuous effort - not strength or intelligence - is the key to unlocking 
+            our potential. 
+        </p>
+    </div>
 <hr/>   
     <!-- Use this to create an ordered list-->
     Leopard
