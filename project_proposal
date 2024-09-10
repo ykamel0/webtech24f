@@ -1,0 +1,18 @@
+<html>
+<html lang="en">
+<head>
+    <title>Youssef's Project Proposal</title>
+
+    <style>
+        h1{color:black; font-family:'Segoe UI';text-align:center}
+        h2{color:darkgreen; font-family:'Segoe UI';text-align:left}
+    </style>
+</head>
+
+    <body>
+        <h1>Youssef's WebTech Project Proposal</h1><br>
+
+        <h2>What is the objective of your website?</h2> <br>
+            <p>The objective of my project is to build a website for the company I interned with last summer of 2024...</p>
+    </body>
+</html>
