@@ -10,16 +10,35 @@
             /*div#one h1 {color: red;}*/
             /*div#one > p {color: Navy;} */ /* The > sign address DIRECT decendents only and not ALL decendents */
             /*h2 + hr {color:red;}*/
-            /*:first-child {color:yellow;}*/
+            /*h2:first-child {color:yellow;}*/
             /*ul ol > li {color:forestgreen;}*/
             /*ul > li {color:red;}*/
            
+            div#ship {background-color: aqua;
+            width: 200px; height: 200px; margin: auto;
+            overflow: scroll;}
+            
+            img#tig {width: 40%; border-radius: 50%;margin: auto; display: block;}    
+            img#tig:hover {box-shadow: 20px 20px 10px 10px lime;}
+            
+            div.container {position:relative; width:50%; height: auto;
+            margin: auto; border: 5px solid green;}
 
+            img#foto {width: 100%; display: block;}
+            
+            div.curtain {position: absolute; top: 0%; left: 0%; right: 0%;
+            overflow: hidden; width: 100%; height: 5%; background-color: blanchedalmond;
+            transition: 5s ease;}
+
+            div.words {position: relative; top: 30%; left: 10%; font-family: 'Segoe UI'; font-size: medium;}
+
+            div.container:hover div.curtain{height: 100%;}
 
             </style>
     </head>
 
     <body>
+        <!--Part One-->
         <div id="one">
 
             <h1> Paragraph 1 </h1>
@@ -66,10 +85,38 @@
 
         </div>
    <hr/>
-   <hr/>
-   <hr/>
-   
+   <!--End of Part One-->
+   <div id="ship">
+    <p>
+    Ships are typically larger than boats, but there is no universally accepted distinction between the two. Ships generally
+    can remain at sea for longer periods of time than boats.[3] A legal definition of ship from Indian case law is a vessel
+    that carries goods by sea.[4] A common notion is that a ship can carry a boat, but not vice versa.[5] A ship is likely
+    to have a full-time crew assigned.[6] A US Navy rule of thumb is that ships heel towards the outside of a sharp turn,
+    whereas boats heel towards the inside[7] because of the relative location of the center of mass versus the center of
+    buoyancy.[8][9] American and British 19th century maritime law distinguished "vessels" from other watercraft; ships and
+    boats fall in one legal category, whereas open boats and rafts are not considered vessels.[10]
 
-    
+    Particularly in the Age of Sail, the word ship might apply generally to a seagoing vessel or particularly to a
+    full-rigged sailing ship with three or more masts, all square-rigged. Other rigs on seagoing vessels included brig,
+    barque, and barquentine.[11]: 8 [12]: 2 [13]: 222 
+
+    Some large vessels are traditionally called boats, notably submarines.[14] Others include Great Lakes freighters,
+    riverboats, and ferryboats, which may be designed for operation on inland or protected coastal waters.[10]
+    </p>
+</div>
+<img src="tiger5-1.jpg" alt="Tiger Image Here" title="Tigger the Tiger" id="tig">
+</hr>
+<div class="container">
+    <img id="foto" src="photo.JPG" alt="Sunset Image" title="Sunset in Hawaii"/>
+    <div class="curtain">
+        <div class="words">
+            This photograph was shot by the renowned photographer <br/>
+            Shankar while he was skiing down a slope devoid of <br/>
+            snow and while being chased by a giant grizzly!!!
+        </div>
+        
+    </div>
+</div>
+
 </body>
 </html>
