@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS8 - drop down menu and responsive design</title>
+    <style>
+        div#banner {background-image: url(forest.jpg); padding: 4%;}
+        h1#heading {color: orange; font-family: Arial; font-weight: bold; text-align: center;}
+    
+        /* start of the menu styles*/
+        .topnav {background-color: bisque; overflow: hidden; font-family: Lucida Handwriting;}
+        .topnav a {float: left;color: black;text-align: center;padding: 14px 40px;text-decoration: none;font-size: 1em;}
+        .active {background-color: green;color: white;}
+        .dropdown {float: left;overflow: hidden;}
+        .dropdown .dropdownbutton {font-size: 1em;border: none;outline: none;color: black;padding: 14px 40px;
+                                    font-family: inherit;background-color: inherit;margin: 0;}
+        .dropdowncontent {position: absolute;display: none;background-color: white;z-index: 1;}
+        .dropdown:hover .dropdowncontent {display: block;}
+        .dropdowncontent a {float: none;display: block;color: black;padding: 12px 16px;text-decoration: none;text-align: left;}
+        .topnav a:hover, .dropdown:hover .dropdownbutton {background-color: gray;color: black;}
+        .dropdowncontent a:hover {background-color: lightgray;color: black;}
+        .topnav .icon {display: none;}
+    </style>
+    
+    <script type="text/javascript">
+        function myFunction() {
+                var x = document.getElementById("mytopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+
+        
+    </script>
+
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">Oranges - Everythin U Want 2 Know</h1>
+    </div>
+    <!--Here starts the menu-->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm" class="active">Home</a>
+        <a href="size.htm">Size</a>
+        <a href="color.htm">Color</a>
+        
+        <div class="dropdown">
+            <button class="dropdownbutton">Types</button>
+            <div class="dropdowncontent">
+                <a href="mandarin.htm">Mandarin</a>
+                <a href="navel.htm">Navel</a>
+                <a href="valencia.htm">Valencia</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdownbutton">Climate</button>
+            <div class="dropdowncontent">
+                <a href="tropical.htm">Tropical</a>
+                <a href="subtropical.htm">Subtropical</a>
+            </div>
+        </div>
+        <a href="aboutme.htm">About Me</a>
+
+
+        
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div> <!--This closes the topnav div-->
+
+
+</body>
+</html>

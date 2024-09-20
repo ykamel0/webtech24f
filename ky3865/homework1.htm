@@ -7,12 +7,13 @@
 	<title></title>
 
 	<style>
-		h1 {color: navy; font-family: arial; font-weight: bold;}
-		div#bg {background-color: beige; width: 60%; font-family: sans-serif; color: navy; font-size: x-small;
-				margin-left: 10%;}
-		p {margin-left: 1.5%; margin-right: 1.5%; margin-top: 1.5%; margin-bottom: 1.5%;}
-		h2 {color: navy; font-family: sans-serif; background-color: yellow; display: inline;
-			margin-left: 1.5%; margin-right: 1.5%; margin-top: 1.5%; margin-bottom: 1.5%;}
+		div#outer {border: 5px solid black; background-color: white;width: 50%; margin-left: 10%; padding: 1.5% 3% 32%;}
+		div#bg {background-color: beige; font-family: 'sans-serif'; color: navy; font-size: small; 
+		padding: 3% 1.5% 0% 1.5%; width: 90%; float: left;}
+		h1 {color: navy; font-family: arial; font-weight: bold;margin-top: 1%;}
+		h2 {color: navy; font-family: sans-serif; background-color: yellow; display: inline ; padding: 0 1.5% 0 1%}
+		img {margin: 1% 1% 1% 0; float: left;}
+		p {padding: 0 0 0 1%;}
 	</style>
 
 
@@ -28,6 +29,7 @@
 	<!-- The left edge of this heading must be aligned with the
 	 left edge of the section below as shown in the instruction
 	 document (1S) -->
+<div id="outer">
 	<h1>Homework 1 - Fall 2024 - WebTech</h1>
 	<!-- The start of the section -->
 	 <!-- Constructing the section is worth 2C points -->
@@ -43,7 +45,7 @@
 	<!-- They both must have a yellow background (2S)
 	  and the background should not extend the entire width of the page.
 	  It must be as short as possible without wrapping the text (3S)-->
-<div id="bg">
+	<div id="bg">
 	<h2>About Widtsoe, Utah</h2>
 	<!-- This is the first paragraph. Tag it appropriately (1C)-->
 	<p>
@@ -60,12 +62,11 @@
 	 sub-heading for construction and for styles. -->
 	<h2>Decline of Widtsoe, Utah</h2>
 	<!-- This is the second paragraph. Tag is appropriately (1C)-->
-	<map>
-		<area shape="rect" coords="54,62,208,141" href="https://www.loc.gov/item/2017759439/" target="_blank" alt="Emery Valley Mercantile Co. store in Widtsoe, 1936">
-	</map>
-<p>
-	<img src="widtsoe.jpg" alt="Dorothea Lange Image" title="Click on the building to see source" id="widtsoe"/>
-</p>
+	
+    <map name="widtsoe" id="img">
+        <area shape="rect" coords="54,62,208,141" href="https://www.loc.gov/item/2017759439/" target="_blank" alt="Emery Valley Mercantile Co. store in Widtsoe, 1936">
+    </map>
+
 	<!-- Insert the image here as the first item inside the paragraph tags
 	 Make sure you provide a complete definition of the image. (2C)
 	 The title of the image must say "Click on the building to see source".
@@ -78,6 +79,7 @@
 	 image and the surrounding text. The space must be only on the top, right,
 	 and bottom. (3S)-->
 	<p>
+	<img src="widtsoe.jpg" alt="Dorothea Lange Image" title="Click on the building to see source" usemap="#widtsoe" id="img"/>
 	In 1925 the Forest Service office was moved away, and Widtsoe went into serious decline.[4] By 1930 the population
 	had dropped to 210, and in 1935 there were only 17 families left in town. In 1936 the federal Resettlement
 	Administration stepped in to buy out local landowners, freeing them from unproductive land and delinquent taxes.[2]
@@ -93,7 +95,11 @@
 	<!-- This line must be below the image as shown in the instruction
 	 document. The size of the font is extra small. There must be no
 	 underline (3S)-->
-	Source: https://en.wikipedia.org/wiki/Widtsoe,_Utah
+	
+	<p><br>
+	<a href="https://en.wikipedia.org/wiki/Widtsoe,_Utah" target="_blank" style="text-decoration: none;">Source: https://en.wikipedia.org/wiki/Widtsoe,_Utah</a>
+	</p>
+	</div>
 </div>
 	<!-- End of the section -->
 

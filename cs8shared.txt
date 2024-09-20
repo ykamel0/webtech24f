@@ -1,0 +1,218 @@
+ 
+ /* We are going to copy each piece sequentially in the order given below */
+  
+	 .topnav {
+            background-color: bisque;
+            overflow: hidden;
+            font-family: Lucida Handwriting;
+        }
+
+
+
+
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+       
+       
+       
+        .active {
+            background-color: green;
+            color: white;
+        }
+
+       
+       
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+       
+       
+        .dropdown .dropdownbutton {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 40px;
+            font-family: inherit;
+            background-color: inherit;
+            margin: 0;
+        }
+
+       
+       
+        .dropdowncontent {
+            position: absolute;
+            display: none;
+            background-color: white;
+            z-index: 1;
+        }
+
+
+
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+       
+
+        
+        .dropdowncontent a {
+            float: none;
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+        }
+
+       
+       
+        .topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: gray;
+            color: black;
+        }
+
+       
+       
+       
+        .dropdowncontent a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+
+       
+       
+       
+       
+
+
+        /* This below goes INSIDE the <script> TAG */
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+
+        /* This goes where we say we will add something later */
+
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+
+        .topnav .icon {
+            display: none;
+        }
+
+
+
+
+       @media screen and (max-width: 750px) {
+
+            .topnav a:not(:first-child),
+            .dropdown .dropdownbutton {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+
+
+        /* This is content related */
+
+
+                The sweet orange is not a wild fruit,[14] having arisen in domestication from a cross between a non-pure
+                mandarin orange and a hybrid pomelo that had a substantial mandarin component. Since its chloroplast DNA
+                is that of pomelo, it was likely the hybrid pomelo, perhaps a BC1 pomelo backcross, that was the
+                maternal parent of the first orange.[4][15] Based on genomic analysis, the relative proportions of the
+                ancestral species in the sweet orange are approximately 42% pomelo and 58% mandarin.[16] All varieties
+                of the sweet orange descend from this prototype cross, differing only by mutations selected for during
+                agricultural propagation.[15] Sweet oranges have a distinct origin from the bitter orange, which arose
+                independently, perhaps in the wild, from a cross between pure mandarin and pomelo parents.[15] The
+                earliest mention of the sweet orange in Chinese literature dates from 314 BC.[2]
+
+
+
+                In Europe, the Moors introduced the orange to the Iberian Peninsula, which was known as Al-Andalus, with
+                large-scale cultivation starting in the 10th century, as evidenced by complex irrigation techniques
+                specifically adapted to support orange orchards.[17] Citrus fruits—among them the bitter orange—were
+                introduced to Sicily in the 9th century during the period of the Emirate of Sicily, but the sweet orange
+                was unknown until the late 15th century or the beginnings of the 16th century, when Italian and
+                Portuguese merchants brought orange trees into the Mediterranean area.[7] Shortly afterward, the sweet
+                orange quickly was adopted as an edible fruit. It was considered a luxury food grown by wealthy people
+                in private conservatories, called orangeries. By 1646, the sweet orange was well known throughout
+                Europe.[7] Louis XIV of France had a great love of orange trees and built the grandest of all royal
+                Orangeries at the Palace of Versailles.[18] At Versailles, potted orange trees in solid silver tubs were
+                placed throughout the rooms of the palace, while the Orangerie allowed year-round cultivation of the
+                fruit to supply the court. When Louis condemned his finance minister, Nicolas Fouquet, in 1664, part of
+                the treasures that he confiscated were over 1,000 orange trees from Fouquet's estate at
+                Vaux-le-Vicomte.[19]
+
+                 Spanish travelers introduced the sweet orange to the American continent. On his second voyage in 1493,
+                Christopher Columbus may have planted the fruit on Hispaniola.[20] Subsequent expeditions in the
+                mid-1500s brought sweet oranges to South America and Mexico, and to Florida in 1565, when Pedro Menéndez
+                de Avilés founded St Augustine. Spanish missionaries brought orange trees to Arizona between 1707 and
+                1710, while the Franciscans did the same in San Diego, California, in 1769.[7] An orchard was planted at
+                the San Gabriel Mission around 1804, and a commercial orchard was established in 1841 near present-day
+                Los Angeles. In Louisiana, oranges were probably introduced by French explorers.
+                Archibald Menzies, the botanist and naturalist on the Vancouver Expedition, collected orange seeds in
+                South Africa, raised the seedlings onboard, and gave them to several Hawaiian chiefs in 1792.
+                Eventually, the sweet orange was grown in wide areas of the Hawaiian Islands, but its cultivation
+                stopped after the arrival of the Mediterranean fruit fly in the early 1900s.[7][21]
+
+            /* This is styles for content */
+
+              .row {display:flex; flex-direction:row; }
+             .about {width:27%; margin:3%; text-align:justify;}
+
+                @media screen and (max-width:750px)
+                {
+                    .row{flex-direction:column;}
+                    .about{width:80%; margin-right:auto; margin-left:auto;}
+                }
