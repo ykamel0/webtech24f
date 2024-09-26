@@ -194,7 +194,7 @@
                 the treasures that he confiscated were over 1,000 orange trees from Fouquet's estate at
                 Vaux-le-Vicomte.[19]
 
-                 Spanish travelers introduced the sweet orange to the American continent. On his second voyage in 1493,
+                Spanish travelers introduced the sweet orange to the American continent. On his second voyage in 1493,
                 Christopher Columbus may have planted the fruit on Hispaniola.[20] Subsequent expeditions in the
                 mid-1500s brought sweet oranges to South America and Mexico, and to Florida in 1565, when Pedro Menéndez
                 de Avilés founded St Augustine. Spanish missionaries brought orange trees to Arizona between 1707 and
@@ -208,7 +208,7 @@
 
             /* This is styles for content */
 
-              .row {display:flex; flex-direction:row; }
+             .row {display:flex; flex-direction:row; }
              .about {width:27%; margin:3%; text-align:justify;}
 
                 @media screen and (max-width:750px)
