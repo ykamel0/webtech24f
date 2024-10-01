@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multimedia and stupid css</title>
+
+    <style>
+        img#b {display: block; margin-right: auto; margin-left: auto; width: 25%;border-radius: 50%; margin-top: 5%;}
+        @keyframes dizzy {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+            }
+        .beaverturn{
+            animation-name: dizzy;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+    </style>
 </head>
+    
 <body>
     <h1>Here is adding an Audio file - Glitch Short Break</h1>
     <audio autoplay controls loop>
-        <source src="glitch-short-break.mp3" type="audio/mp3"/>
+        <source src="glitch-short-break-1.mp3" type="audio/mp3"/>
     </audio>
+    <h1>Adding a video file here</h1>
+    <video autoplay controls loop>
+        <source src="TestVideoByFisk-1.mp4" type="video/mp4"/>
+    </video>
+    <h1>Adding a YouTube video here</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nB9mY2_DfjA?si=v7v74DTg1fzwhDHq"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr/>
+
+    <img id="b" class="beaverturn" src="beaver.jpg" alt="Beaver Image" title="Go Babson!"/>
+
 </body>
 </html>
