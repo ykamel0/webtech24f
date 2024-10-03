@@ -31,6 +31,21 @@
                 {
                     document.getElementById("two").style.backgroundColor = "white";
                 }
+
+                function addBrdr()
+                {
+                    document.getElementById("soura").style.border = "2px solid red";
+                }
+
+                function noBrdr()
+                {
+                    document.getElementById("soura").style.border = "none";
+                }
+
+                function altMe()
+                {
+                    document.getElementById("soura").src = "ships.jpg";
+                }
         </script>
         
     </head>
@@ -59,7 +74,7 @@
 
 
         <h3>Problem 3 - Mouseover the image to add a border and make the border disappear on mouseout</h3>
-        <img src="planes-1.jpg" alt="Image of Planes" title="Fly High" width="400"/>
+        <img id="soura" onclick="altMe()" onmouseover="addBrdr()" onmouseout="noBrdr()" src="planes-1.jpg" alt="Image of Planes" title="Fly High" width="400"/>
         <hr/>
 
     
