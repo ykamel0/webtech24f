@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+		form {background: url(brick.gif) fixed center repeat;
+		margin: 40px 200px 40px 200px; padding: 40px 0;}
+
+		table, td{
+			margin: auto;
+			border:2px solid black;
+			font-size: 20px;
+			font-family: Arial;
+			text-align: center;
+			width: 60%;
+		}
+
+		.first {width: 35%;}
+		.second{width: 20%;}
+		.third {width: 25%;}
+		
+		caption {font-family: 'Lucida Grande';
+		font-size: 2em;
+		color: navy;
+		font-weight: bold;
+		padding-bottom: 20px;
+		}
+
+		img {width: 45%;}
+		
+		p {text-align: center;}
+
+		input#green {background-color: green;}
+		input#yellow {background-color: yellow;}
+	
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<form action="mailto: ykamel1@babson.edu" method="post">
+
+
+	<table>
+		<caption>Catalog of Sweaters</caption>
+		<tr id="one">
+			<td class="first">Product Image</td>
+			<td class="second">Product Price</td>
+			<td class="third">Product Selection</td>
+			<td class="fourth">Product Quantity</td>
+		</tr>
+		<tr id="two">
+			<td class="first"><img src="redsweater.jpg" alt="Red Sweater"/></td>
+			<td class="second">$50.00</td>
+			<td class="third"><input type="radio" name="rsweater" value="rsweater"/>Red Sweater</td>
+			<td class="fourth">Quantity:<input type="text" name="quantity1"/></td>
+		</tr>
+		<tr id="three">
+			<td class="first"><img src="whitesweater.jpg" alt="White Sweater"/></td>
+			<td class="second">$50.00</td>
+			<td class="third"><input type="radio" name="wsweater" value="wsweater"/>White Sweater</td>
+			<td class="fourth">Quantity:<input type="text" name="quantity1"/></td>
+		</tr>
+		<tr id="four">
+			<td class="first"><img src="bluesweater.jpg" alt="Blue Sweater"/></td>
+			<td class="second">$50.00</td>
+			<td class="third"><input type="radio" name="bsweater" value="bsweater"/>Blue Sweater</td>
+			<td class="fourth">Quantity:<input type="text" name="quantity1"/></td>
+		</tr>
+	</table>
+		
+	<p>
+		<input id="green" type="submit" value="Submit Selections">
+		<input id="yellow" type="reset" value="Clear Selections">
+	</p>
+		
+
+	</form>
+
+
+
+  </body>
+</html>

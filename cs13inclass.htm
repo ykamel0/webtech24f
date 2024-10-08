@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Change this title please</title>
+        <!-- Don't worry about the styles. I just added them to make the page look better -->
+        <style type="text/css">
+            h1 {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            h1 {
+                text-align: center;
+            }
+            p {margin-right:100px; margin-left:100px; margin-bottom:50px;font-family:Arial;}
+        </style>
+
+        <script type="text/javascript">
+            function changeCol()
+            {
+                var userinp, mybutton;
+                mybutton = document.getElementById("b");
+                userinp = prompt("Please enter a number between 1 and 9, both inclusive");
+            }
+            
+            if ((userinp >= 1) && (userinp < 5))
+            {
+                mybutton.style.backgroundColor = "green";
+            }
+            else if (userinp == 5)
+            {
+                mybutton.style.backgroundColor = "yellow"
+            }
+            else ((userinp > 5) && (userinp <= 9))
+            {
+                mybutton.style.backgroundColor = "red";
+            }
+           
+        </script> 
+        
+    </head>
+              
+    <body>
+        <!-- Your HTML goes here -->
+        <!-- PROBLEM ONE-->
+
+        <h1> Using inputs with conditional statements -1 </h1>
+        <h3> This is a complex problem. So, we will start with a simpler version
+            and complicate it later. We will go through multiple simple steps to get there.
+            Please follow along carefully because each step will illustrate the different ways
+            to write conditional statements in JavaScript.
+        </h3>
+        <div>
+            <p> 
+                Start simple. When the user clicks on the button, ask the user for a number
+                between 1 and 9, both inclusive. If the number is less than 5, change the color
+                of the BUTTON to green. If greater than 5, change it to red. 
+            </p>
+            <p>
+                When the user clicks on the button below, ask the user for a number between 1 and 9 both inclusive.
+                If the number is between 1 and 4 (both inclusive) change the button color to green.
+                If the number is between 6 and 9 (both inclusive) change the button color to red
+                if the number is exactly 5, change the color to yellow.
+                if the number is outside the range,i.e, less than 1 or more than 9, change the button to black.
+            </p>
+            <button id="b" onclick="changeCol()" style="width:200px; height:100px">Problem 1</button>
+
+        </div>
+        
+    
+    </body>
+</html>

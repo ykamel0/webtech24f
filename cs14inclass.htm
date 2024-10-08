@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Please change the title  </title>
+        <!-- Don't worry about the styles. I just added them to make the page look better -->
+        <style type="text/css">
+            h1 {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            h1 {
+                text-align: center;
+            }
+            img {border:5px solid black; display:block; margin:auto;}
+            p {margin-right:100px; margin-left:100px; margin-bottom:50px;font-family:Arial;}
+        </style>
+
+        <script type="text/javascript">
+            function chgImg()
+            {
+                var myimg;
+                myimg = document.getElementById("a");
+                var myinp;
+                myinp = prompt("Enter one of maple, shamrock, thyme, or clover");
+                if (myinp == "maple")
+                {
+                    myimg.src = "maple.jpg";
+                    myimg.alt = "Maple Leaf";
+                    myimg.title = "Majestic Maple";
+                }
+            }
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        
+        <!-- PROBLEM TWO -->
+        <h1> Using Inputs with Conditional Statements - 2</h1>
+        <div> <p>
+            When the user clicks on the image (placeholder shown) below, ask the user to 
+            input one of 4 values: Shamrock, Clover, Thyme or Maple. Based on what the user
+            provides, show the corresponding image. The 4 images are provided to you. 
+            If you get this to work, then, what if the user types in using all-lower-case or 
+            all-upper-case? How will you change the code to cover that?
+        </p>
+        </div>
+        <div>
+        <img src="" alt="Image Goes Here" title="" width="200"/>
+        </div>
+
+        <!-- END OF PROBLEM TWO.-->
+
+        <!-- PROBLEM 3- We may/not get to this in class today.-->
+        <h1> Changing the Image when you click on it</h1>
+        <div><p>
+            Given below is an image of planes. When you click on it,
+            change it to the image of ships. The way the function must work is, 
+            no matter what the image is, when you click on it, it must change to the 
+            other image. The ALT and TITLE must change appropriately.
+        </p></div>
+        <div>
+            <img id="a" onclick="chgImg" src="planes-1.jpg" alt="Planes" title="Flying High" width="200"/>
+        </div>
+    
+    </body>
+</html>
