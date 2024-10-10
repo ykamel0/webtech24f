@@ -20,15 +20,27 @@
         <script type="text/javascript">
             function chgImg()
             {
-                var myimg;
-                myimg = document.getElementById("a");
+                const myimg = document.getElementById("a");
                 var myinp;
                 myinp = prompt("Enter one of maple, shamrock, thyme, or clover");
+                myinp = myinp.toLowerCase(); /*converts the input to lower case*/
                 if (myinp == "maple")
                 {
                     myimg.src = "maple.jpg";
                     myimg.alt = "Maple Leaf";
                     myimg.title = "Majestic Maple";
+                }
+                else if (myinp == "shamrock")
+                {
+                    myimg.src = "shamrock.jpg";
+                    myimg.alt = "Shamrock";
+                    myimg.title = "Shiny Shamrock";
+                }
+                else if (myinp == "thyme")
+                {
+                    myimg.src = "thyme.jpg";
+                    myimg.alt = "Thyme";
+                    myimg.title = "Thyme";
                 }
             }
         </script>
