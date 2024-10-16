@@ -33,6 +33,19 @@
         
     </head>
 
+    <script>
+        document.getElementById('generalButton').addEventListener('click', function() {
+    document.getElementById('generalForm').style.display = 'block';
+    document.getElementById('investorForm').style.display = 'none';
+    });
+
+    document.getElementById('investorButton').addEventListener('click', function() {
+    document.getElementById('generalForm').style.display = 'none';
+    document.getElementById('investorForm').style.display = 'block';
+    });
+
+    </script>
+
     <body>
 	    <!-- Your HTML goes here -->
         <h1 id="about">About Instagram</h1>
