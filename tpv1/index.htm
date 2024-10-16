@@ -21,22 +21,26 @@
             width: 100%;
         }
 
-        .bottom {
+        .text {
             background-color: lightgray;
             height: 600px;
             margin: 10px 15px;
+            width: 50%;
+            display: block;
         }
 
-        .bottom img {
+        .text img {
             padding: 70px 25px 25px 70px;
             height: 100px;
+            margin: 0 auto;
         }
 
-        .bottom p {
+        .text p {
             padding: 0 25px 0 70px;
-            margin-right: 920px;
+            margin: 0 40px 0 0;
+            line-height: 10mm;
             word-spacing: 3px;
-            font-size: large;
+            font-size: 1.5em;
             font-family:'Segoe UI';
         }
         
@@ -60,6 +64,16 @@
             font-size: 1.2em;
             font-family: 'TTCommonsDemiBold';
             font-weight: bold;
+        }
+
+        .map-content {
+            text-align: right;
+            float: right;
+        }
+
+        #mapImg {
+            height: auto;
+            float: right;
         }
     </style>
 </head>
@@ -89,19 +103,23 @@
             </ul>
         </nav>
     </div>
-    <div>
-            
-    </div>
 
-
-    <div class="bottom">
+    
+    <div class="text">
         <img src="aeg.png" alt="Active Equity Logo" id="aeghome">
         <p>
             Active Equity Group was founded in the wake of the passage of the Inflation Reduction Act of 2022 to provide expertise
             in an industry undergoing a sea change. Having worked in other tax credit industries, consulted for some of the primary
             investors in the space, and worked at several syndicators of various sizes, we saw the opportunity to create a different
-            approach. ​
+            approach.
         </p>
+    </div>
+    <div class="map-content">
+        <img id="mapImg" src="us_map1.png" alt="Map of United States" title="AEG Offices" usemap="#us_map" class="center">
+        <map name="us_map" id="offices">
+            <area shape="poly" coords="1602,389,1602,414,1661,403,1678,423,1705,405,1668,370" href="https://www.activeequitygroup.com/" alt="MA Office" target="_blank"/>
+            <area shape="poly" coords="1252,905,1462,896,1546,1094,1472,1107,1420,963,1381,930,1342,942,1259,928" href="https://www.activeequitygroup.com/" alt="FL Office" target="_blank"/>
+        </map>
     </div>
 </body>
 </html>
