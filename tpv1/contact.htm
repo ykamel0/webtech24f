@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="barstyle.css" type="text/css"/>
+
+
+    <style>
+        body{
+            margin: 0;
+            background-color: rgba(56, 91, 56, 0.427);
+        }
+        .header-container {
+            background-color: white;
+        }
+        #bg-container{
+            background-image: url(solarpanels.jpg);
+            height: 400px;
+        }
+    
+        h1{
+            margin: auto;
+            font-family: 'TTCommonsDemiBold';
+            margin: 25px 25px;
+        }
+    
+        label {
+        display: block;
+        margin-bottom: 5px;
+        }
+
+        input, textarea {
+            display: block;
+            margin-bottom: 10px; /* Space after each input/textarea */
+            width: 90%;
+            padding: 8px; /* Adds some padding inside the input boxes, making them easier to interact with */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin: 0 25px;
+        }
+
+        .button-container button {
+            padding: 10px 20px; 
+            width: auto;
+            margin: 5px;
+            cursor: pointer;
+            flex-grow: 1;
+            font-family: 'TTCommonsDemiBold';
+            font-size: large;
+        }
+
+        form {
+                text-align: left;
+                font-family: 'TTCommonsDemiBold';
+                font-size: large;
+                margin: 20px 300px 50px 300px;
+                padding: 50px 0 50px 100px;
+                color: black;
+                }
+    
+    </style>
+
+    <script>
+        function chgBack()
+        {
+            document.getElementById("generalForm").style.display = "block";
+            document.getElementById("investorForm").style.display = "none";
+        }
+        function chgForm()
+        {
+            document.getElementById("investorForm").style.display = "block";
+            document.getElementById("generalForm").style.display = "none";
+        }
+    </script>
+</head>
+
+
+
+
+<body>
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="index.htm">
+                <img src="aeg.png" alt="Active Equity Logo" id="aeghome">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="about.htm" target="_blank">About Us</a></li>
+                <li><a href="services.htm" target="_blank">Services</a></li>
+                <li><a href="news.htm" target="_blank">News</a></li>
+                <li><a href="partner.htm" target="_blank">Partner</a></li>
+                <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="bg-container"></div>
+
+        <h1>Contact Us</h1>
+
+        <div class="button-container">
+            <button onclick="chgBack()" id="generalButton">General Inquiries</button>
+            <button onclick="chgForm()" id="investorButton">Investor Relations</button>
+        </div>
+        <div id="generalForm" class="form">
+            <!-- General Inquiries Form -->
+            <form>
+                Thank you for your interest in Active Equity. Please submit your inquiry below.<br><br><br>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name Here*"><br><br>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email Here*"><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br><br>
+                <fieldset>
+                    <legend>How interested are you in renewable energy investments?</legend>
+                    <label><input type="radio" name="interest" value="highly interested"> Highly Interested</label>
+                    <label><input type="radio" name="interest" value="somewhat interested"> Somewhat Interested</label>
+                    <label><input type="radio" name="interest" value="just looking"> Just Looking</label>
+                </fieldset><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div id="investorForm" class="form" style="display: none;">
+            <!-- Investor Relations Form -->
+            <form>
+                Thank you for your interest in Active Equity. Please submit your inquiry below.<br><br><br>
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" name="company" placeholder="Enter Your Company's Name Here*"><br><br>
+                <label for="personnel">Contact Name:</label>
+                <input type="text" id="personnel" name="personnel" placeholder="Enter Your Name Here*"><br><br>
+                <label for="position">Contact Position:</label>
+                <input type="text" id="position" name="position" placeholder="Enter Your Position Here*"><br><br>
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" placeholder="Enter a Contact Number Here*"><br><br>
+                <label for="inquiry">Inquiry:</label>
+                <textarea id="inquiry" name="inquiry"></textarea><br><br>
+                <label for="investment-type">Type of Renewable Investment Interested In:</label>
+                <select id="investment-type" name="investment-type">
+                    <option value="solar">Solar Energy</option>
+                    <option value="wind">Wind Energy</option>
+                    <option value="hydro">Hydropower</option>
+                    <option value="bioenergy">Bioenergy</option>
+                    <option value="geothermal">Geothermal Energy</option>
+                </select><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    
+</body>
+</html>
