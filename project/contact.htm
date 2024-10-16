@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="barstyle.css" type="text/css"/>
 
 
     <style>
-        @font-face {
-            font-family: 'TTCommonsDemiBold';
-            src: url('TT Commons DemiBold.otf') format('opentype');
-        }
-
         body{
             margin: 0;
             background-color: rgba(10, 62, 10, 0.773);
@@ -86,6 +82,24 @@
 
 
 <body>
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="index.htm">
+                <img src="aeg.png" alt="Active Equity Logo" id="aeghome">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="about.htm" target="_blank">About Us</a></li>
+                <li><a href="services.htm" target="_blank">Services</a></li>
+                <li><a href="news.htm" target="_blank">News</a></li>
+                <li><a href="partner.htm" target="_blank">Partner</a></li>
+                <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <div id="bg-container">
 
     </div>
@@ -105,6 +119,12 @@
                 <input type="email" id="email" name="email" placeholder="Enter Your Email Here*"><br><br>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message"></textarea><br><br>
+                <fieldset>
+                    <legend>How interested are you in renewable energy investments?</legend>
+                    <label><input type="radio" name="interest" value="highly interested"> Highly Interested</label>
+                    <label><input type="radio" name="interest" value="somewhat interested"> Somewhat Interested</label>
+                    <label><input type="radio" name="interest" value="just looking"> Just Looking</label>
+                </fieldset><br><br>
                 <input type="submit" value="Submit">
             </form>
         </div>
@@ -122,6 +142,14 @@
                 <input type="tel" id="contact" name="contact" placeholder="Enter a Contact Number Here*"><br><br>
                 <label for="inquiry">Inquiry:</label>
                 <textarea id="inquiry" name="inquiry"></textarea><br><br>
+                <label for="investment-type">Type of Renewable Investment Interested In:</label>
+                <select id="investment-type" name="investment-type">
+                    <option value="solar">Solar Energy</option>
+                    <option value="wind">Wind Energy</option>
+                    <option value="hydro">Hydropower</option>
+                    <option value="bioenergy">Bioenergy</option>
+                    <option value="geothermal">Geothermal Energy</option>
+                </select><br><br>
                 <input type="submit" value="Submit">
             </form>
         </div>
