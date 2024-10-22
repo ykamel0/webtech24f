@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title></title>
+
+	<style>
+	/* Your styles go here */
+    h1, h2 {font-family:Cursive; color:Navy; text-align:center;}    
+    form {background-color:aquamarine; color:black; font-family:Arial;
+              padding-left:5%; padding-top:1%; padding-bottom:1%;
+            width:40%; margin:5% auto;}
+        input[type="submit"], input[type="reset"] {height:30px; background-color:yellow;}
+        ol {font-size:1em; font-weight:bold; color: red}
+	
+	</style>
+	<script type="text/javascript">
+        function convButton()
+        {
+            var euro = document.getElementById("conv").elements["euro"].value;
+            var dollar = document.getElementById("conv").elements["dollar"].value;
+            if(euro != "")
+            {
+                document.getElementById("conv").elements["dollar"].value = euro * 1.05;
+            }
+            else if(dollar != "")
+            {
+                document.getElementById("conv").elements["euro"].value = dollar / 1.05;
+            }
+            event.preventDefault();
+        }
+	
+
+	</script>
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> Dollar/Euro or Euro/Dollar Converter</h1>
+	<form id="conv" action="" method="POST">
+        <p>
+            Euro Value: <input type="text" name="euro" size="10" placeholder="Euro Here"/>
+        </p>
+        <p>
+            Dollar Value: <input type="text" name="dollar" size="10" placeholder="Dollars Here"/>
+        </p>
+        <p>
+            <input onclick="convButton()" type="submit" name="submit" value="Convert"/> &nbsp; &nbsp;
+            <input type="reset" name="reset" value="Clear"/>
+        </p>
+
+
+
+    </form>
+    <div>
+      <h2> One dollar equals 1.05 Euros.</h2>
+      <h2> For the First Problem, assume that the following hold</h2>
+    <p>
+      <ol>
+        <li> Assume that the user will always enter a value</li>
+        <li> Assume that the user will always enter the right value</li>
+        <li> Assume that the user will only enter Euro value</li>
+      </ol>
+    </p>
+
+    <h2> For the Second Problem, relax the 3rd assumption.</h2>
+
+    <h2> The third step, we will do this in two sub-steps.<br/>
+      We will relax the second assumption <br/>
+      Then we will relax the first assumption.
+    </h2>
+    </div>
+  </body>
+</html>
