@@ -17,18 +17,29 @@
 	
 	</style>
 	<script type="text/javascript">
-        function convButton()
+        function convButton(event)
         {
             var euro = document.getElementById("conv").elements["euro"].value;
             var dollar = document.getElementById("conv").elements["dollar"].value;
-            if(euro != "")
-            {
-                document.getElementById("conv").elements["dollar"].value = euro * 1.05;
+
+            if (euro !== "" && dollar !== "") {
+          alert("Please enter a value in only one of the fields");
+            } else if (euro === "" && dollar === "") {
+          alert("Please enter a value");
+            } else if (euro !== "" && isNaN(euro)) {
+          alert("Please enter a valid number for Euro");
+            } else if (dollar !== "" && isNaN(dollar)) {
+          alert("Please enter a valid number for Dollar");
+            } else if (euro !== "" && euro < 0) {
+          alert("Please enter a positive number for Euro");
+            } else if (dollar !== "" && dollar < 0) {
+          alert("Please enter a positive number for Dollar");
+            } else if (euro !== "") {
+          document.getElementById("conv").elements["dollar"].value = (euro * 1.05).toFixed(2);
+            } else if (dollar !== "") {
+          document.getElementById("conv").elements["euro"].value = (dollar / 1.05).toFixed(2);
             }
-            else if(dollar != "")
-            {
-                document.getElementById("conv").elements["euro"].value = dollar / 1.05;
-            }
+
             event.preventDefault();
         }
 	
