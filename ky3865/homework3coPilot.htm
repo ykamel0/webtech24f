@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Cost Calculator</title>
+    <style>
+        .container {
+            padding: 20px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px 500px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 96%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #amountDue {
+            margin-top: 20px;
+        }
+
+        #amount {
+            width: calc(100% - 16px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .comments-section {
+            margin: 0 20px;
+        }
+    </style>
+    <script>
+        function calculateAmount() {
+            const item = document.getElementById('item').value.toLowerCase();
+            const quantity = parseInt(document.getElementById('quantity').value);
+            let price = 0;
+
+            if (isNaN(quantity) || quantity <= 0) {
+                alert('Please enter a valid quantity.');
+                return;
+            }
+
+            switch (item) {
+                case 'milk':
+                    price = 3.50;
+                    break;
+                case 'apple':
+                    price = 0.99;
+                    break;
+                case 'fish':
+                    price = 5.99;
+                    break;
+                default:
+                    alert('Please enter a valid item (Milk, Apple, Fish).');
+                    return;
+            }
+
+            const amountDue = (price * quantity).toFixed(2);
+            document.getElementById('amount').value = `$${amountDue}`;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Item Cost Calculator</h1>
+        <form id="itemForm">
+            <label for="item">Item (Milk, Apple, Fish):</label>
+            <input type="text" id="item" name="item" required>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+            <button type="button" onclick="calculateAmount()">Calculate</button>
+        </form>
+        <div id="amountDue">
+            <label for="amount">Amount Due:</label>
+            <input type="text" id="amount" name="amount" readonly>
+        </div>
+    </div>
+    <div class="comments-section">
+        <h2>Homework Comments and Reflection</h2>
+        <h3>Prompts and Iterations</h3>
+        <p>1. Initial prompt to Copilot: "I want you to script a tool (form), as a beginner in coding, with HTML, JavaScript,
+            and CSS that does the following: Allows the user to input one of the three items: (Milk, Apple, Fish) upper or
+            lowercase. Otherwise, pop an alert. Allows the user to input the quantity (only integer value) of the item they
+            wrote. Otherwise, pop an alert. Once validated, use the following costs - 1 bottle of milk is $3.50; one apple is
+            $0.99 and one pound of fish is $5.99 - and show the amount owed in a third field--the "Amount Due" field--when the
+            user click a button that you will create as well. P.S. The amount must be shown with 2 decimal places and prefixed
+            with a $ (dollar) sign."</p>
+        <p>2. Number of iterations: 1</p>
+        
+        <h3>Reflection</h3>
+        <p>In part (1), I created the form using a simple HTML structure with inline CSS for styling and a basic JavaScript
+            function for validation and calculation. My form used a straightforward layout with minimal styling and basic error
+            handling.</p>
+        <p>In part (2), Copilot's solution was more polished and used modern approaches. The HTML structure was similar to mine,
+            but the CSS used advanced styling methods I'm unfamiliar with for layout such as flexbox. The JavaScript
+            function in Copilot's solution included better error handling and more efficient code. It used with the "if" statement a
+            "switch" statement, which I was totally unaware of, and it seemed to work perfectly for the purpose of the tool we're
+            building. Finally, Copilot's solution separated the CSS into an external stylesheet and the javascript as well--I
+            combined them all to be easy when grading. Overall, Copilot's solution was more refined and professionally appealing.</p>
+
+        </div>
+</body>
+</html>
