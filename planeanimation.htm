@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+	/* Your styles go here */
+	img { width:200px;position:absolute; left:0px; top:50px;}
+	button {position:absolute; top:300px; }
+
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+		var pos = 0;
+		function flyPlane()
+		{
+			var myplane;
+			myplane = document.getElementById("daplane");
+			myplane.style.left = pos + "px";
+			pos = pos + 50;
+			if (pos > 1200)
+				{
+					pos = 0
+				}
+			setTimeout("flyPlane()", 500);
+		}
+
+
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<img id="daplane" src="flying.jpg" alt="Flying Plane" title="Flier"/>
+	<br/>
+	<button onclick="flyPlane()">Click to Fly</button>
+	
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Homework 3 - processing forms</title>
+
+	<style>
+	/* Your styles go here */
+    form {background-color:silver; font-family:Arial; color:Navy;
+    padding-left:50px; padding-top:20px; padding-bottom:20px;
+    margin-right:auto; margin-left:auto; width:60%;}
+    .but {width:200px; height:60px; background-color:magenta; color:black;}
+    p#desc {margin:50px 200px; font-family:cursive; }
+    h3 {font-family:lucida handwriting; font-size:3em; text-align:center;}
+	
+
+	</style>
+	
+	<script>
+		function grocery()
+		{
+			event.preventDefault();
+			var myform, myproduct, myquantity, myamt;
+			myform = document.getElementById("orderForm");
+			myproduct = myform.product.value;
+			myproduct = myproduct.toLowerCase();
+			myquantity = myform.quantity.value;
+			myamt = myform.AmtDue;
+			if (myproduct == "")
+			{
+				alert("Please enter a product");
+			}
+			else if((myquantity == "") || (isNaN(myquantity)==true))
+			{
+				alert("Please enter a valid quantity");
+			}
+			else
+			{
+				if(myproduct == "milk")
+				{
+					myamt.value = "$" + (3.50 * myquantity).toFixed(2);
+				}
+				else if(myproduct == "apple")
+				{
+					myamt.value = "$" + (0.99 * myquantity).toFixed(2);
+				}
+				else if(myproduct == "fish")
+				{
+					myamt.value = "$" + (5.99 * myquantity).toFixed(2);
+				}
+				else
+				{
+					alert("Please enter a valid product (Milk, Apple, Fish)");
+				}
+			}
+		}
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+<h3> Homework 3</h3>
+<p id="desc">
+    The form given below has 3 fields. Let us assume that the user will type in
+    the name of one of 3 products: Milk, Apple, or Fish. The user may enter these 
+    using any mix of cases, so be aware. You need to check to ensure that the user
+    enters a value. If it is not one of these 3, let the user know. 
+    Then the user will enter a quantity. You need to check to ensure that a quantity is entered 
+	(you may assume that 0 is a valid quality) and that the value is numeric. 
+    Once validated, use the following costs - 1 bottle of milk is $3.50; one 
+    apple is $0.99 and one pound of fish is $5.99 - and show the amount owed
+    in the third field. All of this should be done when the appropriate 
+    button is pressed. The amount must be shown with 2 decimal places and prefixed with
+	a $ (dollar) sign.     
+</p>
+<form id="orderForm" action="" method="POST">
+	<p>
+		<input type="text" name="product" size="20" placeholder="Enter product..."/>
+		&nbsp; &nbsp;&nbsp;
+		<input type="text" name="quantity" size="20" placeholder="Enter quantity.."/>
+	</p>
+	<p>
+		<input type="text" name="AmtDue" size="20" placeholder="show amount due"/>
+	</p>
+	<p>
+		<input onclick="grocery()" class="but" type="button" name="submit" value="What Do I Owe"/>
+		&nbsp; &nbsp;&nbsp;
+		<input class="but" type="reset" name="reset" value="Clear All"/>  
+	</p>
+</form>
+	
+  </body>
+</html>
