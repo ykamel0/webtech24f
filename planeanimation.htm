@@ -16,19 +16,33 @@
 	<script>
 	/* Your JavaScript goes here */
 		var pos = 0;
+		var flystatus = 0, mytimer;
 		function flyPlane()
 		{
 			var myplane;
 			myplane = document.getElementById("daplane");
 			myplane.style.left = pos + "px";
-			pos = pos + 50;
+			pos = pos + 1; /* pos += 1; ++pos (will increment the variable by 1 every time)*/
 			if (pos > 1200)
 				{
 					pos = 0
 				}
-			setTimeout("flyPlane()", 500);
-		}
+			
+			mytimer = setTimeout("flyPlane()", 10);
+		} /* closure of the flyPlane() function */
 
+		function startStop()
+		{
+			if(flystatus == 0)
+				{
+				mytimer = setTimeout("flyPlane()", 10);
+				}
+			else
+				{
+				clearTimeout(mytimer);
+				flystatus = 0;
+				}
+		}
 
 	  
 	</script>
@@ -38,7 +52,7 @@
 	<!-- Your HTML goes here -->
 	<img id="daplane" src="flying.jpg" alt="Flying Plane" title="Flier"/>
 	<br/>
-	<button onclick="flyPlane()">Click to Fly</button>
+	<button onclick="startStop()">Start/Stop</button>
 	
   </body>
 </html>

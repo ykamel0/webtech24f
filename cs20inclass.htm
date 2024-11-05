@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {background-color: yellow; padding: 5%;}
+        h3#mover {position: absolute;}
+    </style>
+    <script type="text/javascript">
+        const mytext = new Array ("This quiz must be hard", "My brain feels like mush", "I am so tired", "I need a break");
+        var pos = 800, ctr = 0;
+        function scrollText()
+        {
+            document.getElementById("mover").innerHTML = mytext[ctr];
+            document.getElementById("mover").style.left = pos + "px";
+            pos -= 1;
+            if (pos < 100)
+            {
+                pos = 800;
+                ++ctr;
+                if (ctr >= mytext.length)
+                {
+                    ctr = 0;
+                }
+            }
+            setTimeout("scrollText()", 100);
+        }
+        window.onload = scrollText;
+    </script>
+</head>
+<body>
+    <div>
+        <h3 id="mover">ABC</h3>
+    </div>
+</body>
+</html>

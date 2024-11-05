@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title></title><!-- Minus 1 if title is not set. No credits for setting the title-->
+
+	<style>
+	/* Your styles go here */
+	h1 {text-align:center;}
+	table {width:50%; margin-right:auto; margin-left:auto;
+           border:2px solid black; text-align:center;
+           font-size:1.5em; color:navy; background-color:silver;}
+    td {border:2px solid black; height:30px;}
+	.c1 {width:30%;}
+    
+	img {width:100%; border:2px solid black; }
+	</style>
+
+	<script>
+		function chgCarImage()
+		{
+			var img = document.querySelector("img");
+
+			if (event.target.innerText === "CAR") {
+				img.src = "coupe.jpg";
+				img.style.border = "2px ridge red";
+				event.target.innerText = "RED CAR";
+			} else if (event.target.innerText === "SUV") {
+				img.src = "suv.jpg";
+				img.style.border = "2px dashed blue";
+				event.target.innerText = "GREY SUV";
+			} else if (event.target.innerText === "I am Done!") {
+				img.src = "";
+				img.style.border = "2px solid black";
+				document.getElementById('car').innerText = "CAR";
+				document.getElementById('suv').innerText = "SUV";
+			}
+		}
+	</script>
+
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+     <!-- You have a table below. The second column has an image 
+         placeholder without any image assigned. You can see the 
+         border and the alternate heading. 
+         When you click on "CAR", show the car image. The border
+         should be red color and ridge style. Do not change the thickness.
+         The word "CAR" must change to "RED CAR". 
+         When you click on "SUV", show the SUV image. The border
+         should be blue color and dashed style. Do not change the thickness.
+         The word "SUV" must change to "GREY SUV".
+         When you click on "I am Done", no image must be seen. The border
+         must be black and solid. Do not change the thickness. 
+         The words must be "CAR" and "SUV" again. 
+         For full credit, write it as a single function. For 5 points less,
+         use as many functions as needed. The function(s) must work ONLY if
+		 you click on the word (CAR/SUV/I am Done) and not when you click 
+		 the cell in the table.
+         -->
+	<h1>Quiz 3 - 25 points</h1>
+	<table>
+		<tr>
+			<td class="c1"><h3>Car Type</h3></td><td><h3>Car Image</h3></td>
+		</tr>
+		<tr>
+			<td id="coupe" class="c1" onclick="chgCarImage()"><h3 id="car">CAR</h3></td>
+			<td rowspan="3"><img src="" alt="Car Image" title="Car Type"/></td>
+		</tr>
+		<tr>
+			<td id="suv" class="c1" onclick="chgCarImage()"><h3 id="suv">SUV</h3></td>
+		</tr>
+		<tr>
+			<td class="c1" onclick="chgCarImage()"><h3>I am Done!</h3></td>
+		</tr>
+
+	</table>
+  </body>
+</html>

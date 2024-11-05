@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+<head>
+	<title> Quiz 3 - MU - Spring 24</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<style type="text/css">
+	p#HC {font-family:arial black; text-decoration:underline; color:maroon}
+	h2 {text-align:center; font-family:Cursive;}
+	p.eagle {float:left; background-color:Aqua; margin-left:100px;width:150px; height:100px; text-align:center;padding-top:50px; font-family:Lucida Bright;
+	          font-size:1em;}
+    .a {font-style:italic; font-weight:bold;}
+	
+	</style>
+	
+	<script type="text/javascript">
+	
+	</script>
+	
+</head>
+
+<body>
+
+<h1 style="text-align:center; font-family:Arial; font-weight:bold;">Quiz 3 - Make-Up(25 points)</h1>
+<p style="font-family:arial;font-size:16pt;color:navy;padding:10px 100px 10px 100px;">
+	Add appropriate functionality to the four aqua blocks below such that 
+	when the user clicks on each of the 3 aqua-colored blocks, there is a different image of the bald eagle 
+	displayed in the empty image holder above the blocks. The image should have a <span class="a">ridge border, red color, and 5px thick 
+	for the first image </span>, <span class="a">dashed border, green color, 5px thick </span>for the second, and <span class="a">blue color, dotted border, 5px thick</span>
+	for the third.The block that is clicked must have a yellow background. All others must have a silver background. 
+	The title above (Change this Image Title) must say "See Eagle One", "See Eagle Two" or "See Eagle Three".
+	Ensure that the image is completely defined in each case. 
+	When the user clicks on the last block, the title must go back to "Change This Image Title". No image must be shown.
+	No borders must be seen. All blocks must have the aqua background. 
+	For full points (25) please write it as a single function. For five (5) points less,
+	use as many functions as you need. 
+    
+	
+</p>
+<hr style="height:10px" />
+<h2> Change This Image Title</h2>
+<p style="text-align:center">
+	<img id="eagle" src="" alt="" title="This is the image" style="border:3px dotted black;" width="100" height="100"/>
+</p>
+<p style="text-align:center">
+	<p id="one" onclick="showPic(this.id)">See Eagle One</p> 
+    <p id="two" onclick="showPic(this.id)">See Eagle Two</p> 
+	<p id="three" onclick="showPic(this.id)">See Eagle Three</p>
+	<p id="clr" onclick="showPic(this.id)">Clear It All</p>
+    
+	
+</p>
+
+
+</body>
+</html>
