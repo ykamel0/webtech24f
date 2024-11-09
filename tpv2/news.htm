@@ -25,17 +25,26 @@
             display: block;
         }
 
+        h2 {
+            font-size: 3em;
+            color: black;
+            font-family: 'TTCommonsDemiBold';
+            padding: 20px 15px 40px 35px;
+            margin: 30px 0 0;
+            width: 40%;
+            display: block;
+        }
+
         p {
             font-family: 'Segoe UI';
             color: white;
             z-index: 1;
             font-size: large;
             line-height: 8mm;
-            padding: 0px 100px 0 45px;
+            padding: 0px 100px 0 20px;
         }
 
         .news-container {
-            background-color: rgba(0, 128, 0, 0.7);
             margin: 20px;
             padding: 20px;
             border-radius: 10px;
@@ -50,7 +59,9 @@
 
         .news-title {
             font-size: 1.8em;
-            color: black; /* Gold color for titles */
+            color: black;
+            padding-left: 20px;
+            font-family: 'TTCommonsDemiBold';
         }
 
         .action-container {
@@ -63,24 +74,15 @@
         }
 
         .even {
-            background-color: lightblue;
+            background-color: rgb(72, 139, 72);
             padding: 10px;
         }
 
         .odd {
-            background-color: lightsalmon;
+            background-color: rgba(79, 121, 72, 0.8);
             padding: 10px;
         }
     </style>
-
-    <script>
-        function doOdd() {
-            const myodds = document.getElementsByClassName("odd");
-            for (let x = 0; x < myodds.length; x++) {
-                myodds[x].style.backgroundColor = "lightgreen";
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -137,6 +139,7 @@
                 <a href="news.htm" class="sitemap-link">News</a>
                 <a href="partner.htm" class="sitemap-link">Partner</a>
                 <a href="contact.htm" class="sitemap-link">Contact Us</a>
+                <a href="credits.htm" class="sitemap-link">Credits</a>
             </nav>
         </div>
     </footer>
