@@ -6,47 +6,139 @@
     <title>News</title>
     <link rel="icon" type="image/png" href="AEicon.png">
     <link rel="stylesheet" href="barstyle.css" type="text/css"/>
+    <link rel="stylesheet" href="site_map.css" type="text/css"/>
 
     <style>
-        body{
+        body {
             margin: 0;
         }
 
-        #bg-container{
-            background-image: url(asset.png);
-            height: 465px;
-        }
-
-        h1{
-            background-color: white;
+        h1 {
+            font-size: 5em;
             margin: auto;
-            color: black;
-            font-family: 'Times New Roman';
-            margin: 25px 25px;
+            color: white;
+            font-family: 'TTCommonsDemiBold';
+            padding: 40px 15px 50px 35px;
+            background-color: rgba(79, 121, 72, 0.8);
+            margin: 30px 0 0;
+            width: 40%;
+            display: block;
         }
 
+        p {
+            font-family: 'Segoe UI';
+            color: white;
+            z-index: 1;
+            font-size: large;
+            line-height: 8mm;
+            padding: 0px 100px 0 45px;
+        }
+
+        .news-container {
+            background-color: rgba(0, 128, 0, 0.7);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        .news-title {
+            font-size: 1.8em;
+            color: black; /* Gold color for titles */
+        }
+
+        .action-container {
+            background-color: rgba(0, 128, 0, 0.7);
+            margin-top: 20px;
+            color: white;
+            padding: 30px;
+            box-sizing: border-box;
+            max-width: 500px;
+        }
+
+        .even {
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        .odd {
+            background-color: lightsalmon;
+            padding: 10px;
+        }
     </style>
+
+    <script>
+        function doOdd() {
+            const myodds = document.getElementsByClassName("odd");
+            for (let x = 0; x < myodds.length; x++) {
+                myodds[x].style.backgroundColor = "lightgreen";
+            }
+        }
+    </script>
 </head>
 
-
-
 <body>
-    <div class="header-container">
-        <div class="logo-container">
-            <a href="index.htm">
-                <img src="aeg.png" alt="Active Equity Logo" id="aeghome">
-            </a>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.htm">
+                    <img src="aeg.png" alt="Active Equity Logo" id="aeghome">
+                </a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="about.htm">About Us</a></li>
+                    <li><a href="services.htm">Services</a></li>
+                    <li><a href="news.htm" class="active-link">News</a></li>
+                    <li><a href="partner.htm">Partner</a></li>
+                    <li><a href="contact.htm">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <nav>
-            <ul>
-                <li><a href="about.htm" target="_blank">About Us</a></li>
-                <li><a href="services.htm" target="_blank">Services</a></li>
-                <li><a href="news.htm" class="active-link">News</a></li>
-                <li><a href="partner.htm" target="_blank">Partner</a></li>
-                <li><a href="contact.htm" target="_blank">Contact Us</a></li>
-            </ul>
-        </nav>
+
+        <div>
+            <h1>Stay up-to-date</h1>
+        </div>
+
+        <div class="news-container">
+            <h2>Latest News</h2>
+            <div class="news-item odd">
+                <h3 class="news-title">New Solar Project Launched</h3>
+                <p>We are excited to announce the launch of our latest solar project in California, which aims to provide clean energy to over 10,000 homes.</p>
+            </div>
+            <div class="news-item even">
+                <h3 class="news-title">Partnership with GreenTech Innovations</h3>
+                <p>Active Equity Group has partnered with GreenTech Innovations to enhance our renewable energy solutions and expand our market reach.</p>
+            </div>
+            <div class="news-item odd">
+                <h3 class="news-title">Investment in Wind Energy</h3>
+                <p>Our recent investment in wind energy projects is set to contribute significantly to sustainable energy production in the Midwest.</p>
+            </div>
+            <div class="news-item even">
+                <h3 class="news-title">Webinar on Renewable Energy Trends</h3>
+                <p>Join us for an upcoming webinar where industry experts will discuss the latest trends in renewable energy and investment opportunities.</p>
+            </div>
+        </div>
     </div>
+
+    <footer class="sitemap">
+        <div class="sitemap-container">
+            <h2 class="sitemap-title">Sitemap</h2>
+            <nav class="sitemap-nav">
+                <a href="index.htm" class="sitemap-link">Home</a>
+                <a href="about.htm" class="sitemap-link">About Us</a>
+                <a href="services.htm" class="sitemap-link">Services</a>
+                <a href="news.htm" class="sitemap-link">News</a>
+                <a href="partner.htm" class="sitemap-link">Partner</a>
+                <a href="contact.htm" class="sitemap-link">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>

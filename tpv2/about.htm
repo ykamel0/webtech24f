@@ -6,6 +6,8 @@
     <title>About Us</title>
     <link rel="icon" type="image/png" href="AEicon.png">
     <link rel="stylesheet" href="barstyle.css" type="text/css"/>
+    <link rel="stylesheet" href="site_map.css" type="text/css"/>
+
 
     <style>
 
@@ -63,10 +65,17 @@
         .action-container {
             background-color: rgba(0, 128, 0, 0.7); /* Green background with transparency */
             margin-top: 200px;
+            margin-left: 15px;
             color: white; /* White text color */
             padding: 30px; /* Padding inside the container */
             box-sizing: border-box; /* Include padding in width and height */
             max-width: 500px; /* Maximum width to control the size */
+        }
+        .content-wrapper {
+            display: flex;   /* Ensures flexbox layout */
+            justify-content: space-between; /* Puts space between items */
+            align-items: flex-start; /* Aligns items at the top */
+            flex-wrap: wrap; /* Allows items to wrap if needed */
         }
 
     </style>
@@ -76,7 +85,7 @@
 <body>
     <div class="video-container">
         <video autoplay muted loop id="myVideo" width="1920" height="1080">
-            <source src="about.mp4" type="video/mp4">
+            <source src="9opac.mp4" type="video/mp4">
         </video>
 
     <div class="header-container">
@@ -89,15 +98,15 @@
         <nav>
             <ul>
                 <li><a href="about.htm" class="active-link">About Us</a></li>
-                <li><a href="services.htm" target="_blank">Services</a></li>
-                <li><a href="news.htm" target="_blank">News</a></li>
-                <li><a href="partner.htm" target="_blank">Partner</a></li>
-                <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+                <li><a href="services.htm">Services</a></li>
+                <li><a href="news.htm">News</a></li>
+                <li><a href="partner.htm">Partner</a></li>
+                <li><a href="contact.htm">Contact Us</a></li>
             </ul>
         </nav>
     </div>
 
-    <div class="content-wrapper">
+    <div>
         <div class="story">
             <h1>Our Story</h1>
         <p> 
@@ -111,15 +120,20 @@
             transaction, and set out to ensure that those who work with us once will work with us twice.”​
         </p>
         </div>
-
-        <div class="action-container">
-            <h2>Navigating the Energy Transition</h2>
-            <p id="note">The US renewables industry is shifting like never before. Macro trends, world-leading subsidies, and soaring energy
-                demand from the AI boom have pushed an already increasing sector into new territory, making it the most attractive
-                renewable industry globally. With experience in over $4bn of renewable energy investments, our team has the
-                expertise to simplify the process.
-            </p>
-        </div>
+        
     </div>
+    <footer class="sitemap">
+        <div class="sitemap-container">
+          <h2 class="sitemap-title">Sitemap</h2>
+          <nav class="sitemap-nav">
+            <a href="index.htm" class="sitemap-link">Home</a>
+            <a href="about.htm" class="sitemap-link">About Us</a>
+            <a href="services.htm" class="sitemap-link">Services</a>
+            <a href="news.htm" class="sitemap-link">News</a>
+            <a href="partner.htm" class="sitemap-link">Partner</a>
+            <a href="contact.htm" class="sitemap-link">Contact Us</a>
+          </nav>
+        </div>
+      </footer>
 </body>
 </html>

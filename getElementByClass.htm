@@ -14,6 +14,12 @@
         function doOdd()
         {
             const myodds = document.getElementsByClassName("odd");
+            const myevens = document.getElementsByClassName("even");
+            var x;
+            for (x = 0; x < myodds.length; x++)
+            {
+                myodds[x].style.backgroundColor = "lightgreen";
+            }
         }
     </script>
 </head>

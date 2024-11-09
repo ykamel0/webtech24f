@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function showMe()
+        {
+            const myprod = document.querySelector('input[name="prod"]').value.trim().toLowerCase();
+            const myqty = document.forms['f']['qty'].value;
+            /*const myqty = document.forms[0]['qty'].value;*/
+            var myamtdue = document.forms['f']['amtdue'].value;
+            const pricelist = {'apple': 0.50, 'banana': 0.30, 'orange': 0.40, 'grape': 0.60};
+            const myset = ['apple', 'banana', 'orange', 'grape'];
+            if (myset.includes(myprod))
+            if (!myprod in myset)
+            if (!myprod in pricelist)
+            {
+                alert('Please enter a valid product');
+            }
+            else
+            {
+                alert(pricelist[myprod]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="f" method="post" action="">
+        <p>
+            Product: &nbsp; <input type="text" name="prod" size="10"/>
+        </p>
+        <p>
+            Quantity: &nbsp; <input type="text" name="qty" size="10"/>
+        </p>
+        <p>
+            Amount Due: &nbsp; <input type="text" name="amtdue" size="10"/>
+        </p>
+        <p>
+            <input onclick="showMe()" type="submit" name="submit" value="Show Me"/>
+            <input type="reset" name="reset" value="Clear Me"/>
+        </p>
+    </form>
+</body>
+</html>
