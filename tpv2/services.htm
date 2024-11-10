@@ -11,7 +11,6 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
             color: white;
             overflow: auto; /* Prevent scrollbars from appearing */
         }
@@ -38,7 +37,7 @@
         }
 
         #bg-container {
-            height: 465px;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -50,7 +49,7 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            font-size: 3em;
+            font-size: 4em;
         }
 
         .services-container {
@@ -71,13 +70,15 @@
 
         .service-title {
             font-size: 1.8em;
-            color: #ffcc00; /* Gold color for titles */
+            color: #ffcc00;
             margin-bottom: 10px;
+            padding-left: 20px;
         }
 
         .service-description {
             font-size: 1.1em;
             line-height: 1.5;
+            padding-left: 20px;
         }
 
         footer {
@@ -112,7 +113,7 @@
     </div>
 
     <div id="bg-container">
-        <h1>Our Services</h1>
+        <h1 style="font-family:'TTCommonsDemiBold'"> Our Services</h1>
     </div>
 
     <div class="services-container">
@@ -131,6 +132,10 @@
         <div class="service-item">
             <h2 class="service-title">Consulting for Renewable Energy Developers</h2>
             <p class="service-description">Our consulting services offer strategic insights...</p>
+        </div>
+        <div class="service-item">
+            <h2 class="service-title">Modeling and Licensing</h2>
+            <p class="service-description">We provide advanced modeling and licensing solutions to help developers navigate the complexities of renewable energy projects...</p>
         </div>
     </div>
     

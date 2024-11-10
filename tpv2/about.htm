@@ -29,7 +29,7 @@
             z-index: 1;
             font-size: large;
             line-height: 8mm;
-            padding: 0px 100px 0 45px;
+            padding: 0px 50px 0 45px;
         }
 
         .story {
@@ -63,16 +63,23 @@
         }
 
         .action-container {
-            background-color: rgba(0, 128, 0, 0.7); /* Green background with transparency */
-            margin-top: 200px;
+            background-color: rgba(0, 128, 0, 0.7);
+            margin-top: 100px;
             margin-left: 15px;
-            color: white; /* White text color */
-            padding: 30px; /* Padding inside the container */
-            box-sizing: border-box; /* Include padding in width and height */
-            max-width: 500px; /* Maximum width to control the size */
+            color: white;
+            padding: 30px;
+            box-sizing: border-box;
+            max-width: 500px;
+        }
+        .rounded-image {
+            border-radius: 50%;
+            display: block;
+            margin: auto;
+            max-width: 150px;
+            height: auto;
         }
         .content-wrapper {
-            display: flex;   /* Ensures flexbox layout */
+            display: flex; /* Ensures flexbox layout */
             justify-content: space-between; /* Puts space between items */
             align-items: flex-start; /* Aligns items at the top */
             flex-wrap: wrap; /* Allows items to wrap if needed */
@@ -106,7 +113,7 @@
         </nav>
     </div>
 
-    <div>
+    <div class="content-wrapper">
         <div class="story">
             <h1>Our Story</h1>
         <p> 
@@ -120,6 +127,13 @@
             transaction, and set out to ensure that those who work with us once will work with us twice.”​
         </p>
         </div>
+        <div class="action-container">
+            <img class="rounded-image" src="pmprofile.jpg" alt="AEG President">
+            <p>I am <span style="font-weight: bold;">Peter Manning</span>, the President at Active Equity Group.<br>
+                Join Our Team Our brand starts with our team, and our relational approach begins with our employees. We are currently looking for experienced individuals to join Active Equity. Interested in learning more?<br>
+                Email <span style="text-decoration: underline;">contact@activeequitygroup.com</span>
+            </p>
+        </div>
         
     </div>
     <footer class="sitemap">
@@ -132,6 +146,7 @@
             <a href="news.htm" class="sitemap-link">News</a>
             <a href="partner.htm" class="sitemap-link">Partner</a>
             <a href="contact.htm" class="sitemap-link">Contact Us</a>
+            <a href="credits.htm" class="sitemap-link">Credits</a>
           </nav>
         </div>
       </footer>
