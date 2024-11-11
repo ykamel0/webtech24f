@@ -15,32 +15,32 @@
             overflow: auto; /* Prevent scrollbars from appearing */
         }
 
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Behind all other content */
-            overflow: hidden;
-        }
-
-        .video-background video {
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
         #bg-container {
             height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #myVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            background-size: cover;
         }
 
         h1 {
@@ -88,11 +88,12 @@
 </head>
 
 <body>
-    <div class="video-background">
-        <video autoplay muted loop>
-            <source src="9opac.mp4" type="video/mp4">
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="allbg.mp4" type="video/mp4">
         </video>
     </div>
+    
 
     <div class="header-container">
         <div class="logo-container">

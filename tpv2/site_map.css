@@ -3,6 +3,10 @@
   color: white; /* White text color */
   padding: 20px; /* Padding around the sitemap */
   text-align: center; /* Center the text */
+  position: relative; /* Ensures it layers above the video */
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sitemap-title {

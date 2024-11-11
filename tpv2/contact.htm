@@ -69,15 +69,25 @@
     </style>
 
     <script>
-        function chgBack()
+        function general()
         {
             document.getElementById("generalForm").style.display = "block";
-            document.getElementById("investorForm").style.display = "none";
+            document.getElementById("generalButton").style.backgroundColor = 'lightgrey';
+            if (document.getElementById("investorForm").style.display == "block")
+            {
+                document.getElementById("investorForm").style.display = "none";
+                document.getElementById("investorButton").style.backgroundColor = 'white';
+            }
         }
-        function chgForm()
+        function investor()
         {
             document.getElementById("investorForm").style.display = "block";
-            document.getElementById("generalForm").style.display = "none";
+            document.getElementById("investorButton").style.backgroundColor = 'lightgrey';
+            if (document.getElementById("generalForm").style.display == "block")
+            {
+                document.getElementById("generalForm").style.display = "none";
+                document.getElementById("generalButton").style.backgroundColor = 'white';
+            }
         }
     </script>
 </head>
@@ -109,8 +119,8 @@
         <h1>Contact Us</h1>
 
         <div class="button-container">
-            <button onclick="chgBack()" id="generalButton">General Inquiries</button>
-            <button onclick="chgForm()" id="investorButton">Investor Relations</button>
+            <button onclick="general()" id="generalButton">General Inquiries</button>
+            <button onclick="investor()" id="investorButton">Investor Relations</button>
         </div>
         <div id="generalForm" class="form">
             <!-- General Inquiries Form -->

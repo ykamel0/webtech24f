@@ -7,31 +7,84 @@
     <link rel="icon" type="image/png" href="AEicon.png">
     <link rel="stylesheet" href="barstyle.css" type="text/css"/>
     <link rel="stylesheet" href="site_map.css" type="text/css"/>
+    <style>
+        body {
+            margin: 0;
+            overflow: auto; /* Enable scrolling */
+        }
 
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #myVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            background-size: cover;
+        }
+
+        .partner-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            position: relative; /* Position relative for layering above the video */
+            z-index: 1; /* Ensure content is above the video */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding-top: 70px; /* Space for header */
+            padding-bottom: 100px; /* Space for footer */
+        }
+
+        .partner-item {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .partner-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .partner-item h3 {
+            font-size: 1.5em;
+            margin-top: 15px;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .partner-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 
-<style>
-    body{
-        margin: 0;
-    }
-
-    #bg-container{
-        background-image: url(asset.png);
-        height: 465px;
-    }
-
-    h1{
-        background-color: white;
-        margin: auto;
-        color: black;
-        font-family: 'Times New Roman';
-        margin: 25px 25px;
-    }
-
-</style>
-
-
 <body>
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="allbg.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <div class="header-container">
         <div class="logo-container">
             <a href="index.htm">
@@ -49,6 +102,34 @@
             </ul>
         </nav>
     </div>
+
+    <div class="partner-container">
+        <div class="partner-item">
+            <img src="corps.jpg" alt="Public & Private Corporations">
+            <h3>Public & Private Corporations</h3>
+        </div>
+        <div class="partner-item">
+            <img src="banks.jpg" alt="Banks">
+            <h3>Banks</h3>
+        </div>
+        <div class="partner-item">
+            <img src="developers.jpg" alt="Renewable Developers">
+            <h3>Renewable Developers</h3>
+        </div>
+        <div class="partner-item">
+            <img src="pe.jpg" alt="Private Equity Firms">
+            <h3>Private Equity Firms</h3>
+        </div>
+        <div class="partner-item">
+            <img src="insurance.jpg" alt="Insurance Companies">
+            <h3>Insurance Companies</h3>
+        </div>
+        <div class="partner-item">
+            <img src="wealth.jpg" alt="Sovereign Wealth Funds">
+            <h3>Sovereign Wealth Funds</h3>
+        </div>
+    </div>
+    
     <footer class="sitemap">
         <div class="sitemap-container">
           <h2 class="sitemap-title">Sitemap</h2>
@@ -62,6 +143,6 @@
             <a href="credits.htm" class="sitemap-link">Credits</a>
           </nav>
         </div>
-      </footer>
+    </footer>
 </body>
 </html>
