@@ -14,8 +14,22 @@
             var myamtdue = document.forms['f']['amtdue'].value;
             const pricelist = {'apple': 0.50, 'banana': 0.30, 'orange': 0.40, 'grape': 0.60};
             const myset = ['apple', 'banana', 'orange', 'grape'];
-            if (myset.includes(myprod))
-            if (!myprod in myset)
+            // if (myset.includes(myprod))
+            // if (!myprod in myset)
+            
+            if(!(myprod in pricelist))
+            {
+                alert('Please enter a valid value for quantity');
+            }
+            else
+            {
+                let amt;
+                amt = myqty * pricelist[myprod];
+                myqty = parseFloat(myqty);
+                event.preventDefault();
+                myamtdue.value = '$' + amt.toFixed(3);
+            }
+
             if (!myprod in pricelist)
             {
                 alert('Please enter a valid product');
