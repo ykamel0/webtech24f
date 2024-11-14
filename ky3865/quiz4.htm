@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title></title><!-- Minus 1 if not filled -->
+
+	<style>
+	/* Your styles go here */
+    form { width:50%; margin-right:auto; margin-left:auto; padding-left:5%;
+           background-color:silver; padding-top:5%; padding-bottom:5%;}
+	textarea {border:3px ridge red;}
+		
+	</style>
+	<script type="text/javascript">
+		function changeColor(event){
+			var color1 = document.getElementById("col").elements["color1"].value;
+			var color2 = document.getElementById("col").elements["color2"].value;
+			var pallette = document.getElementById("col").elements["pallette"];
+			if(color1 == "null" && color2 !== ""){
+				alert("Please select a color from the first list");
+			}
+			else if(color1 !== "" && color2 == "null"){
+				alert("Please select a color from the second list");
+			}
+			else if(color1 == "green" && color2 == "red"){
+				pallette.style.backgroundColor = "Brown";
+			}
+			else if(color1 == "green" && color2 == "blue"){
+				pallette.style.backgroundColor = "Cyan";
+			}
+			else if(color1 == "yellow" && color2 == "red"){
+				pallette.style.backgroundColor = "Orange";
+			}
+			else if(color1 == "yellow" && color2 == "blue"){
+				pallette.style.backgroundColor = "Green";
+			}
+			event.preventDefault();
+		}
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	
+		<form id="col" method="POST" action="">
+			<p>
+				<select name="color1">
+					<option value="null">Select Color One</option>
+					<option value="green">Green</option>
+					<option value="yellow">Yellow</option>
+				</select> &nbsp; &nbsp;
+				<select name="color2">
+					<option value="null">Select Color Two</option>
+					<option value="red">Red</option>
+					<option value="blue">Blue</option>
+				</select> 
+			</p>
+			<p>
+				<textarea name="pallette"></textarea>
+			</p>
+            <p>
+                <input onclick="changeColor(event)" type="submit" name="submit" value="SHOW"/> &nbsp; &nbsp;
+                <input type="reset" name="reset" value="NO"/>
+            </p>
+		</form>
+
+	<!-- You are given a form with two drop down lists. Each list has two colors -->
+    <!-- The user will pick one color from each list. -->
+    <!-- Depending on the colors chosen, please set the background of the 
+        text area (the one with a red border) to the color that results from 
+        mixing the two colors chosen (17 points). You may use the following for this 
+        problem.-->
+    <!-- Green and Red makes Brown -->
+    <!-- Green and Blue makes Cyan -->
+    <!-- Yellow and Red makes Orange -->
+    <!-- Yellow and Blue makes Green -->
+    <!-- For the additional 8 points, warn the user if the user does not select 
+         a color from each list. Make sure you are specific with the error message.
+         The user must be told which list (the first or the second) the user did 
+         not select the color from. -->
+    
+		
+	
+	
+  </body>
+</html>
