@@ -14,7 +14,7 @@
 		
 	</style>
 	<script type="text/javascript">
-		function changeColor(event){
+		function changeColor(){
 			var color1 = document.getElementById("col").elements["color1"].value;
 			var color2 = document.getElementById("col").elements["color2"].value;
 			var pallette = document.getElementById("col").elements["pallette"];
@@ -65,7 +65,7 @@
 				<textarea name="pallette"></textarea>
 			</p>
             <p>
-                <input onclick="changeColor(event)" type="submit" name="submit" value="SHOW"/> &nbsp; &nbsp;
+                <input onclick="changeColor()" type="submit" name="submit" value="SHOW"/> &nbsp; &nbsp;
                 <input type="reset" name="reset" value="NO"/>
             </p>
 		</form>
