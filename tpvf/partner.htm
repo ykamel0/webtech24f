@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner with Us</title>
+    <link rel="icon" type="image/png" href="AEicon.png">
+    <link rel="stylesheet" href="barstyle.css" type="text/css"/>
+    <link rel="stylesheet" href="site_map.css" type="text/css"/>
+    <style>
+        body {
+            margin: 0;
+            overflow: auto; /* Enable scrolling */
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #myVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            background-size: cover;
+        }
+
+        .partner-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            position: relative; /* Position relative for layering above the video */
+            z-index: 1; /* Ensure content is above the video */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding-top: 70px; /* Space for header */
+            padding-bottom: 100px; /* Space for footer */
+        }
+
+        .partner-item {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .partner-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .partner-item h3 {
+            font-size: 1.5em;
+            margin-top: 15px;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .partner-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="allbg.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="index.htm">
+                <img src="aeg.png" alt="Active Equity Logo" id="aeghome">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a class="dropdown">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="team.htm">Team</a></li>
+                        <li><a href="about.htm">Mission</a></li>
+                        <li><a href="services.htm">Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.htm">News</a></li>
+                <li><a href="partner.htm">Partner</a></li>
+                <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+                <!-- Find the credits page in the sitemap -->
+            </ul>
+        </nav>
+    </div>
+
+    <div class="partner-container">
+        <div class="partner-item">
+            <img src="corps.jpg" alt="Public & Private Corporations">
+            <h3>Public & Private Corporations</h3>
+        </div>
+        <div class="partner-item">
+            <img src="banks.jpg" alt="Banks">
+            <h3>Banks</h3>
+        </div>
+        <div class="partner-item">
+            <img src="developers.jpg" alt="Renewable Developers">
+            <h3>Renewable Developers</h3>
+        </div>
+        <div class="partner-item">
+            <img src="pe.jpg" alt="Private Equity Firms">
+            <h3>Private Equity Firms</h3>
+        </div>
+        <div class="partner-item">
+            <img src="insurance.jpg" alt="Insurance Companies">
+            <h3>Insurance Companies</h3>
+        </div>
+        <div class="partner-item">
+            <img src="wealth.jpg" alt="Sovereign Wealth Funds">
+            <h3>Sovereign Wealth Funds</h3>
+        </div>
+    </div>
+    
+    <footer class="sitemap">
+        <div class="sitemap-container">
+          <h2 class="sitemap-title">Sitemap</h2>
+          <nav class="sitemap-nav">
+            <a href="index.htm" class="sitemap-link">Home</a>
+            <a href="about.htm" class="sitemap-link">About Us</a>
+            <a href="services.htm" class="sitemap-link">Services</a>
+            <a href="news.htm" class="sitemap-link">News</a>
+            <a href="partner.htm" class="sitemap-link">Partner</a>
+            <a href="contact.htm" class="sitemap-link">Contact Us</a>
+            <a href="credits.htm" class="sitemap-link">Credits</a>
+          </nav>
+        </div>
+    </footer>
+</body>
+</html>

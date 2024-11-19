@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="icon" type="image/png" href="AEicon.png">
+    <link rel="stylesheet" href="barstyle.css" type="text/css"/>
+    <link rel="stylesheet" href="site_map.css" type="text/css"/>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: azure;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #myVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            background-size: cover;
+        }
+        h1 {
+            font-size: 3.5em;
+            margin: auto;
+            color: white;
+            font-family: 'TTCommonsDemiBold';
+            padding: 40px 15px 50px 35px;
+            background-color: rgba(79, 121, 72, 0.8);
+            margin: 30px 0 80px;
+            width: 55%;
+            display: block;
+        }
+
+        p {
+            font-family: 'Segoe UI';
+            color: white;
+            z-index: 1;
+            font-size: large;
+            line-height: 8mm;
+            padding: 0px 100px 0 20px;
+        }
+
+        .news-container {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        .news-title {
+            font-size: 1.8em;
+            color: black;
+            padding-left: 20px;
+            font-family: 'TTCommonsDemiBold';
+        }
+
+        .action-container {
+            background-color: rgba(0, 128, 0, 0.7);
+            margin-top: 20px;
+            color: white;
+            padding: 30px;
+            box-sizing: border-box;
+            max-width: 500px;
+        }
+
+        .even {
+            background-color:rgba(79, 121, 72, 0.8);
+            padding: 10px;
+        }
+
+        .odd {
+            background-color: rgb(72, 139, 72);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo" width="1920" height="1080">
+            <source src="allbg.mp4" type="video/mp4">
+        </video>
+    </div>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.htm">
+                    <img src="aeg.png" alt="Active Equity Logo" id="aeghome">
+                </a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li>
+                        <a class="dropdown">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="team.htm">Team</a></li>
+                            <li><a href="about.htm">Mission</a></li>
+                            <li><a href="services.htm">Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="news.htm">News</a></li>
+                    <li><a href="partner.htm">Partner</a></li>
+                    <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+                    <!-- Find the credits page in the sitemap -->
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <h1>Stay up-to-date with latest press</h1>
+        </div>
+
+        <div class="news-container">
+            <div class="news-item odd">
+                <h3 class="news-title">New Solar Project Launched</h3>
+                <p>We are excited to announce the launch of our latest solar project in California, which aims to provide clean energy to over 10,000 homes.</p>
+            </div>
+            <div class="news-item even">
+                <h3 class="news-title">Partnership with GreenTech Innovations</h3>
+                <p>Active Equity Group has partnered with GreenTech Innovations to enhance our renewable energy solutions and expand our market reach.</p>
+            </div>
+            <div class="news-item odd">
+                <h3 class="news-title">Investment in Wind Energy</h3>
+                <p>Our recent investment in wind energy projects is set to contribute significantly to sustainable energy production in the Midwest.</p>
+            </div>
+            <div class="news-item even">
+                <h3 class="news-title">Webinar on Renewable Energy Trends</h3>
+                <p>Join us for an upcoming webinar where industry experts will discuss the latest trends in renewable energy and investment opportunities.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="sitemap">
+        <div class="sitemap-container">
+            <h2 class="sitemap-title">Sitemap</h2>
+            <nav class="sitemap-nav">
+                <a href="index.htm" class="sitemap-link">Home</a>
+                <a href="about.htm" class="sitemap-link">About Us</a>
+                <a href="services.htm" class="sitemap-link">Services</a>
+                <a href="news.htm" class="sitemap-link">News</a>
+                <a href="partner.htm" class="sitemap-link">Partner</a>
+                <a href="contact.htm" class="sitemap-link">Contact Us</a>
+                <a href="credits.htm" class="sitemap-link">Credits</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'TTCommonsDemiBold';
+    src: url('TT Commons DemiBold.otf') format('opentype');
+}
+.logo-container img {
+    width: 120px; /* Adjust size as needed */
+    
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Adjust space between items */
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* Change text color to white for visibility */
+    font-size: 1.6em;
+    font-family: 'TTCommonsDemiBold';
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Adds shadow for better readability */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: green;
+    color: white;
+}
+
+.active-link {
+    background-color: rgb(79, 147, 79);
+    color: white;
+    padding: 10px 20px;
+}
+
+
+
+/* Dropdown Menu Styling */
+nav ul li {
+    position: relative;
+}
+
+nav ul .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:rgb(211, 211, 211, 0.9);
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+nav ul .dropdown-menu li {
+    padding: 5px 15px;
+}
+
+nav ul .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+nav ul .dropdown-menu li a:hover {
+    background-color: green;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}

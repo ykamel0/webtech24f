@@ -1,0 +1,33 @@
+.sitemap {
+  background-color: rgba(0, 50, 0, 0.8); /* Dark green background with transparency */
+  color: white; /* White text color */
+  padding: 20px; /* Padding around the sitemap */
+  text-align: center; /* Center the text */
+  position: relative; /* Ensures it layers above the video */
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sitemap-title {
+  font-size: 2em; /* Title font size */
+  margin-bottom: 15px; /* Space below the title */
+}
+
+.sitemap-nav {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the links */
+  flex-wrap: wrap; /* Allow wrapping of links */
+}
+
+.sitemap-link {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px; /* Space between links */
+  font-size: 1.2em; /* Font size for links */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.sitemap-link:hover {
+  color: #ffcc00; /* Change color on hover */
+} 

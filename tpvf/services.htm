@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="icon" type="image/png" href="AEicon.png">
+    <link rel="stylesheet" href="barstyle.css" type="text/css"/>
+    <link rel="stylesheet" href="site_map.css" type="text/css"/>
+
+    <style>
+        body {
+            margin: 0;
+            color: white;
+            overflow: auto; /* Prevent scrollbars from appearing */
+        }
+
+        #bg-container {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #myVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            background-size: cover;
+        }
+
+        h1 {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 4em;
+        }
+
+        .services-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            position: relative; /* Position relative for z-index */
+            z-index: 1; /* Ensure content is above the video */
+        }
+
+        .service-item {
+            background-color: rgba(0, 128, 0, 0.7);
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-title {
+            font-size: 1.8em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        .service-description {
+            font-size: 1.1em;
+            line-height: 1.5;
+            padding-left: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="allbg.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="index.htm">
+                <img src="aeg.png" alt="Active Equity Logo" id="aeghome">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a class="dropdown active-link">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="team.htm">Team</a></li>
+                        <li><a href="about.htm">Mission</a></li>
+                        <li><a href="services.htm">Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.htm">News</a></li>
+                <li><a href="partner.htm">Partner</a></li>
+                <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+                <!-- Find the credits page in the sitemap -->
+            </ul>
+        </nav>
+    </div>
+
+    <div id="bg-container">
+        <h1 style="font-family:'TTCommonsDemiBold'"> Our Services</h1>
+    </div>
+
+    <div class="services-container">
+        <div class="service-item">
+            <h2 class="service-title">Renewable Energy Syndication</h2>
+            <p class="service-description">We specialize in syndicating renewable energy projects...</p>
+        </div>
+        <div class="service-item">
+            <h2 class="service-title">Underwriting and Asset Management</h2>
+            <p class="service-description">Our team provides comprehensive underwriting...</p>
+        </div>
+        <div class="service-item">
+            <h2 class="service-title">Tax Credit Transfers</h2>
+            <p class="service-description">We facilitate tax credit transfers...</p>
+        </div>
+        <div class="service-item">
+            <h2 class="service-title">Consulting for Renewable Energy Developers</h2>
+            <p class="service-description">Our consulting services offer strategic insights...</p>
+        </div>
+        <div class="service-item">
+            <h2 class="service-title">Modeling and Licensing</h2>
+            <p class="service-description">We provide advanced modeling and licensing solutions to help developers navigate the complexities of renewable energy projects...</p>
+        </div>
+    </div>
+    
+
+    <footer class="sitemap">
+        <div class="sitemap-container">
+            <h2 class="sitemap-title">Sitemap</h2>
+            <nav class="sitemap-nav">
+                <a href="index.htm" class="sitemap-link">Home</a>
+                <a href="about.htm" class="sitemap-link">About Us</a>
+                <a href="services.htm" class="sitemap-link">Services</a>
+                <a href="news.htm" class="sitemap-link">News</a>
+                <a href="partner.htm" class="sitemap-link">Partner</a>
+                <a href="contact.htm" class="sitemap-link">Contact Us</a>
+                <a href="credits.htm" class="sitemap-link">Credits</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
