@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title>Right File</title>
+        
+        
+        
+        <style type="text/css">
+            /* The styles go here*/
+        div#slider {margin-right:auto; margin-left:auto; margin-top:200px;}
+            
+        </style>
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.cycle.all.js"></script>
+        <script type="text/javascript" src="jquery.easing.js"></script> 
+        <script>
+            $(function() {
+
+                /*$("#slider").cycle({
+                fx:     'shuffle',
+                easing: 'easeOutBack',
+                delay:  -4000
+                });*/
+
+                $('#slider').cycle({
+                fx:     'shuffle',
+                shuffle: { top:-230, left:-230},
+                easing: 'easeOutBack',
+                delay:  -4000
+                });
+
+                // $("#slider").cycle( {
+                //     fx: 'zoom',
+                //     sync: false,
+                //     delay: -2000
+                // });
+
+
+            });
+        
+        
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <!-- Make sure the images are all about the same size. In this example -->
+        <!-- I have intentionally added tiger5.jpg that is bigger than the first -->
+        <!-- four. You can see how the slide-show becomes big for slide 5. When you -->
+        <!-- have this on a page with content, the content tends to shift because of -->
+        <!-- using images of different sizes. Paint works to resize images. -->
+        
+        <div id="slider">
+                <img src="tiger1.jpg" alt="Tiger 1" title="Good Tiger" width="400"/>
+                <img src="tiger2.jpg" alt="Tiger 2" title="Bad Tiger" width="400"/>
+                <img src="tiger3.jpg" alt="Tiger 3" title="Dirty Tiger" width="400"/>
+                <img src="tiger4.jpg" alt="Tiger 4" title="Nice Tiger" width="400"/>
+                <img src="tiger5.jpg" alt="Tiger 5" title="Pretty Tiger" width="400"/>
+                <img src="tiger6.jpg" alt="Tiger 6" title="Massive Tiger" width="400"/>
+                <img src="tiger7.jpg" alt="Tiger 7" title="Peaceful Tiger" width="400"/>
+        </div>
+           
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Text and Animated Typing</title>
+
+    <style>
+        h1#a {font-family: Arial; font-size: x-large; padding: 20px; text-align: center;}
+        h2#b {font-family: Lucida; color: navy; margin-top: 100px; text-align: center;}
+    </style>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.arctext.js"></script>
+    <!-- <script type="text/javascript" src="jquery.animateTyping.js"></script> -->
+     
+    <!--putthing it here does not make any sense. putting it at the bottom below all the divs it should be applied for will do the job-->
+
+    <script type="text/javascript">
+        $(function() {
+            $("h1#a").click(function(){
+                $(this).arctext({radius:200, dir:1});
+                $("h2#b").arctext({radius:400, dir:-1});
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1 id="a">This is a really cool function</h1>
+    <h2 id="b">This is another way to do the same thing</h2>
+
+
+    <div class="animate-typing"
+     data-type-speed="200"
+     data-type-delay="200"
+     data-remove-speed="50"
+     data-remove-delay="500"
+     data-animate-loop="true"> <!-- class "animate-typing" activates it automatically. no need to write a function -->
+
+    Thank you all for a great semester
+    </div>
+    <script type="text/javascript" src="jquery.animateTyping.js"></script>
+    <!-- function--located in the head section--is preloaded much prior to the text -->
+
+
+</body>
+</html>

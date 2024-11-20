@@ -3,15 +3,17 @@
     src: url('TT Commons DemiBold.otf') format('opentype');
 }
 .logo-container img {
-    width: 120px; /* Adjust size as needed */
-    
+    width: 80px; /* Adjust size as needed */
+    background-color: white;
+    padding: 5px;
+    border-radius: 3%;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     background-size: cover;
-    padding: 20px 30px;
+    padding: 5px 30px;
     box-sizing: border-box;
     width: 100%;
 }
@@ -22,17 +24,18 @@ nav ul {
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 50px; /* Adjust space between items */
+    gap: 10px; /* Adjust space between items */
 }
 
 nav ul li a {
+    margin-top: 7px;
     position: relative;
     display: inline-block;
     padding: 10px 20px;
     background-color: transparent;
     text-decoration: none;
     color: rgb(255, 255, 255); /* Change text color to white for visibility */
-    font-size: 1.6em;
+    font-size: 1.3em;
     font-family: 'TTCommonsDemiBold';
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Adds shadow for better readability */
@@ -60,17 +63,11 @@ nav ul li {
 nav ul .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color:rgb(211, 211, 211, 0.9);
-    padding: 10px 0;
+    background-color:rgba(211, 211, 211, 0.9);
     list-style: none;
-    border-radius: 5px;
-    min-width: 150px;
-}
-
-nav ul .dropdown-menu li {
-    padding: 5px 15px;
+    border-radius: 0px;
+    min-width: 100px;
+    z-index: 2;
 }
 
 nav ul .dropdown-menu li a {

@@ -7,19 +7,31 @@
     <link rel="icon" type="image/png" href="AEicon.png">
     <link rel="stylesheet" href="barstyle.css" type="text/css"/>
     <link rel="stylesheet" href="site_map.css" type="text/css"/>
+    <link href="jquery.flipster.min.css" rel="stylesheet"/>
 
-    <style>
+        <style>
         body {
             margin: 0;
-            color: white;
-            overflow: auto; /* Prevent scrollbars from appearing */
+            background-color: rgb(240, 248, 240); /* Soft mint green background */
+            font-family: Arial, sans-serif;
+            color: rgb(33, 37, 41); /* Dark text for readability */
         }
 
         #bg-container {
-            height: 200px;
+            height: 100px;
+            margin: 70px 0 0 0;
+            padding: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: rgb(79, 121, 72, 0.5); /* Dark green header background */
+            color: white;
+        }
+
+        #bg-container h1 {
+            font-size: 3.5em;
+            font-family: 'TTCommonsDemiBold';
+            margin: 0;
         }
 
         .video-container {
@@ -42,49 +54,45 @@
             height: auto;
             background-size: cover;
         }
-
-        h1 {
-            background-color: rgba(255, 255, 255, 0.8);
-            color: black;
-            padding: 20px;
+        
+        .flipster-card {
+            width: 300px;
+            height: 200px;
+            background-color: #DFF0D8; /* Light green */
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            font-size: 4em;
+            margin: 50px;
+            padding: 50px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .services-container {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            position: relative; /* Position relative for z-index */
-            z-index: 1; /* Ensure content is above the video */
-        }
-
-        .service-item {
-            background-color: rgba(0, 128, 0, 0.7);
-            margin: 15px 0;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-title {
-            font-size: 1.8em;
-            color: #ffcc00;
+        .flipster-card h2 {
+            font-size: 1.5em;
+            font-family: 'TTCommonsDemiBold';
+            color: #367E48; /* Darker green */
             margin-bottom: 10px;
-            padding-left: 20px;
         }
 
-        .service-description {
-            font-size: 1.1em;
-            line-height: 1.5;
-            padding-left: 20px;
+        .flipster-card p {
+            font-size: 1em;
+            color: #4A4A4A; /* Neutral dark text */
         }
-
         footer {
             margin-top: 20px;
         }
     </style>
+
+    <script src="jquery.min.js"></script>
+    <script src="jquery.flipster.min.js"></script>
+    <script>
+        $(function(){
+        var coverflow = $("#coverflow").flipster();
+        });
+    </script>
 </head>
 
 <body>
@@ -115,38 +123,57 @@
                 <li><a href="news.htm">News</a></li>
                 <li><a href="partner.htm">Partner</a></li>
                 <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+                <li><a href="credits.htm">Credits</a></li>
                 <!-- Find the credits page in the sitemap -->
             </ul>
         </nav>
     </div>
 
     <div id="bg-container">
-        <h1 style="font-family:'TTCommonsDemiBold'"> Our Services</h1>
+        <h1>Our Services</h1>
     </div>
 
-    <div class="services-container">
-        <div class="service-item">
-            <h2 class="service-title">Renewable Energy Syndication</h2>
-            <p class="service-description">We specialize in syndicating renewable energy projects...</p>
-        </div>
-        <div class="service-item">
-            <h2 class="service-title">Underwriting and Asset Management</h2>
-            <p class="service-description">Our team provides comprehensive underwriting...</p>
-        </div>
-        <div class="service-item">
-            <h2 class="service-title">Tax Credit Transfers</h2>
-            <p class="service-description">We facilitate tax credit transfers...</p>
-        </div>
-        <div class="service-item">
-            <h2 class="service-title">Consulting for Renewable Energy Developers</h2>
-            <p class="service-description">Our consulting services offer strategic insights...</p>
-        </div>
-        <div class="service-item">
-            <h2 class="service-title">Modeling and Licensing</h2>
-            <p class="service-description">We provide advanced modeling and licensing solutions to help developers navigate the complexities of renewable energy projects...</p>
-        </div>
+    <div id="coverflow">
+        <ul class="flip-items">
+            <li>
+                <div class="flipster-card">
+                    <h2>Renewable Energy Syndication</h2>
+                    <p>Syndicating large-scale renewable energy projects for optimal returns.</p>
+                </div>
+            </li>
+            <li>
+                <div class="flipster-card">
+                    <h2>Underwriting and Asset Management</h2>
+                    <p>Comprehensive underwriting and asset management for renewable projects.</p>
+                </div>
+            </li>
+            <li>
+                <div class="flipster-card">
+                    <h2>Tax Credit Transfers</h2>
+                    <p>Maximizing value through efficient tax credit transfers and compliance.</p>
+                </div>
+            </li>
+            <li>
+                <div class="flipster-card">
+                    <h2>Consulting for Renewable Energy Developers</h2>
+                    <p>Offering strategic insights to developers navigating project complexities.</p>
+                </div>
+            </li>
+            <li>
+                <div class="flipster-card">
+                    <h2>Solar Energy Investments</h2>
+                    <p>Investing in scalable solar energy projects to foster sustainable energy transitions.</p>
+                </div>
+            </li>
+            <li>
+                <div class="flipster-card">
+                    <h2>Wind Energy Investments</h2>
+                    <p>Driving investments in wind energy projects to harness clean energy.</p>
+                </div>
+            </li>
+        </ul>
     </div>
-    
+
 
     <footer class="sitemap">
         <div class="sitemap-container">
@@ -162,5 +189,10 @@
             </nav>
         </div>
     </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.6/jquery.flipster.css"></script>
+    <script src="js/jquery.flipster.min.js"></script>
+    
 </body>
 </html>

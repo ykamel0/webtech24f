@@ -6,24 +6,18 @@
     <title>Contact Us</title>
     <link rel="icon" type="image/png" href="AEicon.png">
     <link rel="stylesheet" href="barstyle.css" type="text/css"/>
+    <link rel="stylesheet" href="site_map.css" type="text/css"/>
 
 
     <style>
         body{
             margin: 0;
-            background-color:rgb(114, 170, 114);
-        }
-        .header-container {
-            background-color: rgb(114, 170, 114);
-        }
-        #bg-container{
-            background-image: url(solarpanels.jpg);
-            height: 400px;
+            background-color:rgba(96, 149, 96, 0.71);
         }
     
         h1{
             font-size: 3.5em;
-            color: white;
+            color: black;
             margin: auto;
             font-family: 'TTCommonsDemiBold';
             text-align: center;
@@ -83,11 +77,8 @@
         {
             document.getElementById("investorForm").style.display = "block";
             document.getElementById("investorButton").style.backgroundColor = 'lightgrey';
-            if (document.getElementById("generalForm").style.display == "block")
-            {
-                document.getElementById("generalForm").style.display = "none";
-                document.getElementById("generalButton").style.backgroundColor = 'white';
-            }
+            document.getElementById("generalForm").style.display = "none";
+            document.getElementById("generalButton").style.backgroundColor = 'white';
         }
     </script>
 </head>
@@ -116,6 +107,7 @@
                 <li><a href="news.htm">News</a></li>
                 <li><a href="partner.htm">Partner</a></li>
                 <li><a href="contact.htm" target="_blank">Contact Us</a></li>
+                <li><a href="credits.htm">Credits</a></li>
                 <!-- Find the credits page in the sitemap -->
             </ul>
         </nav>
@@ -173,6 +165,19 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
-    
+        <footer class="sitemap">
+            <div class="sitemap-container">
+              <h2 class="sitemap-title">Sitemap</h2>
+              <nav class="sitemap-nav">
+                <a href="index.htm" class="sitemap-link">Home</a>
+                <a href="about.htm" class="sitemap-link">About Us</a>
+                <a href="services.htm" class="sitemap-link">Services</a>
+                <a href="news.htm" class="sitemap-link">News</a>
+                <a href="partner.htm" class="sitemap-link">Partner</a>
+                <a href="contact.htm" class="sitemap-link">Contact Us</a>
+                <a href="credits.htm" class="sitemap-link">Credits</a>
+              </nav>
+            </div>
+          </footer>
 </body>
 </html>
