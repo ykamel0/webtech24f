@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>YK Quiz 6</title><!-- a point off if not changed.-->
+
+	<style>
+	/* Your styles go here */
+
+	h1 {font-family:Arial; font-size:large; text-align:center; color:Navy;}
+	div {height:75px; width:75px; background-color:red; position: absolute;}
+	p#inst {font-family:Arial; font-size:large; color:navy; font-weight:bold;}
+	
+	
+	</style>
+
+	<script type="text/javascript">
+		var ver = 400;
+		var hor = 200;
+		function scrollText()
+		{
+			document.getElementById("mover").style.top = ver + "px";
+			document.getElementById("mover").style.left = hor + "px";
+			ver -= 10;
+			if (ver < 100)
+			{
+				ver = 400;
+				hor += 100;
+				if (hor == 800)
+				{
+					hor = 200;
+				}
+			}
+			setTimeout(scrollText, 100);
+		}
+		
+	</script>
+	
+	
+  </head>
+
+  <body onload="scrollText()">
+	<!-- Your HTML goes here -->
+	<h1> Animate the boxes (25 points) </h1>
+	<!-- You are asked to animate the box provided where the box travels from 
+	     the bottom to the top of the screen. You can set the initial position
+		 of the box to 400px on the vertical axis and 200px on the horizontal
+		 axis (i.e. 400px from the top and 200 from the left).
+		 Move the box towards the top (from the bottom). When the box reaches
+		 the top (say 100px), move the box 100px further left and restart 
+		 the movement from bottom to top by resetting the vertical axis to 400px
+		 (the inital setting). When it reaches 800px on the horizontal
+		 axis, reset the horizontal to 200px (inital setting).
+		 The grading is as follows: (1) Setup for the function to work (5), 
+		 (2) moving the box from bottom to top (10), resetting the vertical (5)
+		 and resetting the horizontal (5).
+		 NOTE: If you add code here that you cannot explain, even if you say that you
+        used this code from gen-AI for practice, IF you cannot explain the code 
+        to me you will not be given credit. I have to be fair to those students in the 
+        class that resort to original effort instead of relying on external sources. 
+        You will get more points for trying and failing than for successfully implementing
+        code that is not yours. --> 
+
+	<div id="mover">
+
+		Animate Me!!
+	</div>
+		
+	
+	
+  </body>
+</html>

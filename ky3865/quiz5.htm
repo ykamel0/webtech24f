@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>YK Quiz 5</title><!-- a point off if not filled -->
+        <style type="text/css">
+            h1 {
+                text-align: center;
+            }
+            form {
+                font-family: Arial;
+                color:blueviolet;
+                margin-right:300px;
+                padding-left:100px;
+            }
+            table {
+                border:1px solid black;
+                padding:35px 10px 35px 10px;
+                background-color:aqua;
+                color:blueviolet
+            }
+            .one, .two {width:32%;}
+            .three {width:36%;}
+        
+            p {
+                width: 80%;
+                font-family: Arial;
+                color:Navy;
+                font-size: 16pt;
+                margin-left:300px; 
+            }
+            select,button, input {
+                font-size: 12pt;
+            }
+
+            ul li {list-style-type:square}
+        </style>
+        
+        <script type="text/javascript">
+            function compute() {
+                myform = document.getElementById("f");
+                var product = myform.product.value;
+                var quantity = myform.quantity.value;
+                var total = myform.total.value;
+                var myinp;
+
+                if (product == "XXX" || quantity == "XXX") {
+                    alert("Please select a product and quantity");
+                } else {
+                    if (product == "Shirt") {
+                        myinp = prompt("What are you willing to pay for the Shirt?");
+                    } else {
+                        myinp = prompt("What are you willing to pay for the Pant?");
+                    }
+
+                    if (myinp < 12.99 || myinp > 24.99) {
+                        alert("Please enter a price between $12.99 and $24.99");
+                    } 
+                    else 
+                    {
+                        event.preventDefault();
+                        total = myinp * quantity;
+                        myform.total.value = "$" + total;
+                    }
+                }
+            }
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <!-- NOTE: If you add code here that you cannot explain, even if you say that you
+        used this code from gen-AI for practice, IF you cannot explain the code 
+        to me you will not be given credit. I have to be fair to those students in the 
+        class that resort to original effort instead of relying on external sources. 
+        You will get more points for trying and failing than for successfully implementing
+        code that is not yours. -->
+
+        <h1> Tally the Total (25 points) </h1>
+        <p> 
+            <ul>
+                <li>This is a table with a form.</li> 
+            <li>There are 2 drop down menus - one for selecting the product and the other for selecting 
+            the fixed order quantity. </li>
+            <li>The user will select one from each list and click on compute. </li>
+
+                    <li>Please prompt the user the price they are willing to pay for the "shirt" or "pant", 
+                        depending on what they selected (6).<br/> 
+                    If shirt is selected, it must say "What are you willing to pay for the Shirt". Same for the pant as well. 
+                    <li> Validate to make sure that one item is selected from each list. Let the user know
+                        when the user has not selected one from each list. (4)
+                    </li>
+                    <li>Make sure that the price is between $12.99 and $24.99 (5). If not, alert the user that the price entered has to between
+                    the two values above.</li>
+                    <li>Please display the total (with $ signs) when the compute button is clicked (10). </li> 
+                    
+                    <li> Hint: Validate the two drop downs using if and else if and then use the else
+                        to complete the rest of the functionality. 
+                    </li>
+            </ul>
+        </p>
+       <form id="f" action="" method="post">
+            <table>
+                 <tr>
+                     <td class="one">
+                    <select name="product">
+                        <option value="XXX">Select Product</option>
+                        <option value="Shirt">Shirt</option>
+                        <option value="Pant">Pant</option>
+                    </select> 
+                     </td>
+                     <td class="two">
+                     <select name="quantity">
+                        <option value="XXX">Select Quantity</option>
+                        <option value="10">10 Units</option>
+                        <option value="20">20 Units</option>
+                        <option value="30">30 Units</option>
+                    </select>
+                     </td>
+                     <td class="three">
+                         Total: <input type="text" name="total" size="10" />
+                     </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3" onclick="compute()"><button>Compute</button>
+                    <input type="reset" name="reset" value="Clear"/></td>
+
+                </tr>
+           </table>
+         </form>
+       
+   
+    
+    </body>
+</html>
