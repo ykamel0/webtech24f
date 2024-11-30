@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="barstyle.css" type="text/css"/>
     <link rel="stylesheet" href="site_map.css" type="text/css"/>
 
-
     <style>
         body{
             margin: 0;
@@ -58,8 +57,29 @@
                 margin: 20px 300px 50px 300px;
                 padding: 50px 0 50px 100px;
                 color: black;
-                }
-    
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+                margin: 20px 10px;
+            }
+
+            form {
+                margin: 20px 20px 50px 20px;
+                padding: 20px 0 20px 20px;
+            }
+
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button-container button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
     </style>
 
     <script>
@@ -80,11 +100,27 @@
             document.getElementById("generalForm").style.display = "none";
             document.getElementById("generalButton").style.backgroundColor = 'white';
         }
+
+        function validate(formName) {
+            event.preventDefault();
+            
+            var myForm = document.forms[formName];
+            
+            var myName = (formName == "generalForm") ? myForm["name"].value : myForm["personnel"].value;
+            var myContact = (formName == "generalForm") ? myForm["email"].value : myForm["contact"].value;
+
+            // Validate that the necessary fields are not empty
+            if (myName == "" || myContact == "") {
+                myForm.style.backgroundColor = "lightcoral";
+                alert("All required fields must be filled out.");
+            } else {
+                myForm.style.backgroundColor = "lightgreen"; // Change color to indicate form successfull submission
+                alert("Thank you, " + myName + ", for submitting your request. We will contact you shortly at: " + myContact + ".");
+            }
+        }
+
     </script>
 </head>
-
-
-
 
 <body>
     <div class="header-container">
@@ -115,60 +151,62 @@
 
     <div id="bg-container"></div>
 
-        <h1>Contact Us</h1>
+    <h1>Contact Us</h1>
 
-        <div class="button-container">
-            <button onclick="general()" id="generalButton">General Inquiries</button>
-            <button onclick="investor()" id="investorButton">Investor Relations</button>
-        </div>
-        <div id="generalForm" class="form">
-            <!-- General Inquiries Form -->
-            <form>
-                Thank you for your interest in Active Equity. Please submit your inquiry below.<br><br><br>
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter Your Name Here*"><br><br>
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter Your Email Here*"><br><br>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea><br><br>
-                <fieldset>
-                    <legend>How interested are you in renewable energy investments?</legend>
-                    <label><input type="radio" name="interest" value="highly interested"> Highly Interested</label>
-                    <label><input type="radio" name="interest" value="somewhat interested"> Somewhat Interested</label>
-                    <label><input type="radio" name="interest" value="just looking"> Just Looking</label>
-                </fieldset><br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-        <div id="investorForm" class="form" style="display: none;">
-            <!-- Investor Relations Form -->
-            <form>
-                Thank you for your interest in Active Equity. Please submit your inquiry below.<br><br><br>
-                <label for="company">Company Name:</label>
-                <input type="text" id="company" name="company" placeholder="Enter Your Company's Name Here*"><br><br>
-                <label for="personnel">Contact Name:</label>
-                <input type="text" id="personnel" name="personnel" placeholder="Enter Your Name Here*"><br><br>
-                <label for="position">Contact Position:</label>
-                <input type="text" id="position" name="position" placeholder="Enter Your Position Here*"><br><br>
-                <label for="contact">Contact Number:</label>
-                <input type="tel" id="contact" name="contact" placeholder="Enter a Contact Number Here*"><br><br>
-                <label for="inquiry">Inquiry:</label>
-                <textarea id="inquiry" name="inquiry"></textarea><br><br>
-                <label for="investment-type">Type of Renewable Investment Interested In:</label>
-                <select id="investment-type" name="investment-type">
-                    <option value="solar">Solar Energy</option>
-                    <option value="wind">Wind Energy</option>
-                    <option value="hydro">Hydropower</option>
-                    <option value="bioenergy">Bioenergy</option>
-                    <option value="geothermal">Geothermal Energy</option>
-                </select><br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-        <footer class="sitemap">
-            <div class="sitemap-container">
-              <h2 class="sitemap-title">Sitemap</h2>
-              <nav class="sitemap-nav">
+    <div class="button-container">
+        <button onclick="general()" id="generalButton">General Inquiries</button>
+        <button onclick="investor()" id="investorButton">Investor Relations</button>
+    </div>
+    <div id="generalForm" class="form">
+        <!-- General Inquiries Form -->
+        <form name="generalForm" onsubmit="validate('generalForm')">
+            Thank you for your interest in Active Equity. Please submit your inquiry below.<br><br><br>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name Here*"><br><br>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email Here*"><br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><br><br>
+            <fieldset>
+                <legend>How interested are you in renewable energy investments?</legend>
+                <label><input type="radio" name="interest" value="highly interested"> Highly Interested</label>
+                <label><input type="radio" name="interest" value="somewhat interested"> Somewhat Interested</label>
+                <label><input type="radio" name="interest" value="just looking"> Just Looking</label>
+            </fieldset><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <div id="investorForm" class="form" style="display: none;">
+        <!-- Investor Relations Form -->
+        <form name="investorForm" onsubmit="validate('investorForm')">
+            Thank you for your interest in Active Equity. Please submit your inquiry below.<br><br><br>
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" name="company" placeholder="Enter Your Company's Name Here*"><br><br>
+            <label for="personnel">Contact Name:</label>
+            <input type="text" id="personnel" name="personnel" placeholder="Enter Your Name Here*"><br><br>
+            <label for="position">Contact Position:</label>
+            <input type="text" id="position" name="position" placeholder="Enter Your Position Here*"><br><br>
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter a Contact Number Here*"><br><br>
+            <label for="inquiry">Inquiry:</label>
+            <textarea id="inquiry" name="inquiry"></textarea><br><br>
+            <label for="investment-type">Type of Renewable Investment Interested In:</label>
+            <select id="investment-type" name="investment-type">
+                <option value="solar">Solar Energy</option>
+                <option value="wind">Wind Energy</option>
+                <option value="hydro">Hydropower</option>
+                <option value="bioenergy">Bioenergy</option>
+                <option value="geothermal">Geothermal Energy</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <footer class="sitemap">
+        <div class="sitemap-container">
+            <h2 class="sitemap-title">Sitemap</h2>
+            <nav class="sitemap-nav">
                 <a href="index.htm" class="sitemap-link">Home</a>
                 <a href="about.htm" class="sitemap-link">About Us</a>
                 <a href="services.htm" class="sitemap-link">Services</a>
@@ -176,8 +214,8 @@
                 <a href="partner.htm" class="sitemap-link">Partner</a>
                 <a href="contact.htm" class="sitemap-link">Contact Us</a>
                 <a href="credits.htm" class="sitemap-link">Credits</a>
-              </nav>
-            </div>
-          </footer>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>

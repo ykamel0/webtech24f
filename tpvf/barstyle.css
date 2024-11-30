@@ -1,3 +1,5 @@
+/* I want this bar to be mobile-phone friendly */
+
 @font-face {
     font-family: 'TTCommonsDemiBold';
     src: url('TT Commons DemiBold.otf') format('opentype');
@@ -84,4 +86,25 @@ nav ul .dropdown-menu li a:hover {
 
 nav ul li:hover .dropdown-menu {
     display: block;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header-container {
+        padding: 5px 10px; /* Adjust padding for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Change to a column layout for mobile devices */
+        gap: 5px; /* Adjust space between items */
+    }
+
+    nav ul li a {
+        padding: 10px 10px; /* Adjust padding for smaller screens */
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .logo-container img {
+        width: 60px; /* Adjust size as needed */
+    }
 }

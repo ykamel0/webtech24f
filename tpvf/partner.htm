@@ -1,3 +1,11 @@
+<!-- 
+Hi Professor,
+6.
+Please find on this page the effect implemented using JavaScript with conditional statements.
+The function flipper() is used to switch between displaying an image and displaying descriptive text upon clicking. When the image is clicked, it is hidden, and the corresponding text is shown, and vice versa.
+I placed the script at the end of the body to ensure that the loading sequence is valid.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,6 +70,7 @@
             height: 200px;
             object-fit: cover;
             border-radius: 8px 8px 0 0;
+            cursor: pointer; /* Indicate that the image is clickable */
         }
 
         .partner-item h3 {
@@ -75,7 +84,27 @@
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
+
+        .partner-item div {
+            font-family: 'Arial', sans-serif;
+            line-height: 30px;
+            font-size: 1.2em;
+            color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .partner-container {
+                grid-template-columns: 1fr; /* Single column layout for smaller screens */
+            }
+
+            .partner-item img {
+                height: auto; /* Adjust image height for smaller screens */
+            }
+        }
     </style>
+    
 </head>
 
 <body>
@@ -103,40 +132,46 @@
                     </ul>
                 </li>
                 <li><a href="news.htm">News</a></li>
-                <li><a href="partner.htm">Partner</a></li>
+                <li><a href="partner.htm" class="active-link">Partner</a></li>
                 <li><a href="contact.htm" target="_blank">Contact Us</a></li>
                 <li><a href="credits.htm">Credits</a></li>
-                <!-- Find the credits page in the sitemap -->
             </ul>
         </nav>
     </div>
 
     <div class="partner-container">
         <div class="partner-item">
-            <img src="corps.jpg" alt="Public & Private Corporations">
+            <img id="partner1" src="corps.jpg" alt="Public & Private Corporations">
+            <div id="partner1Text" style="display: none;">Public & Private Corporations: We collaborate with a wide range of corporations to achieve mutual sustainability goals.</div>
             <h3>Public & Private Corporations</h3>
         </div>
         <div class="partner-item">
-            <img src="banks.jpg" alt="Banks">
+            <img id="partner2" src="banks.jpg" alt="Banks">
+            <div id="partner2Text" style="display: none;">Banks: Our partnerships with banks help in the funding of large-scale renewable energy projects.</div>
             <h3>Banks</h3>
         </div>
         <div class="partner-item">
-            <img src="developers.jpg" alt="Renewable Developers">
+            <img id="partner3" src="developers.jpg" alt="Renewable Developers">
+            <div id="partner3Text" style="display: none;">Renewable Developers: We work closely with renewable developers to innovate and expand renewable energy solutions.</div>
             <h3>Renewable Developers</h3>
         </div>
         <div class="partner-item">
-            <img src="pe.jpg" alt="Private Equity Firms">
+            <img id="partner4" src="pe.jpg" alt="Private Equity Firms">
+            <div id="partner4Text" style="display: none;">Private Equity Firms: We partner with private equity firms to finance and grow renewable energy initiatives.</div>
             <h3>Private Equity Firms</h3>
         </div>
         <div class="partner-item">
-            <img src="insurance.jpg" alt="Insurance Companies">
+            <img id="partner5" src="insurance.jpg" alt="Insurance Companies">
+            <div id="partner5Text" style="display: none;">Insurance Companies: Our insurance partners help mitigate risks for sustainable projects.</div>
             <h3>Insurance Companies</h3>
         </div>
         <div class="partner-item">
-            <img src="wealth.jpg" alt="Sovereign Wealth Funds">
+            <img id="partner6" src="wealth.jpg" alt="Sovereign Wealth Funds">
+            <div id="partner6Text" style="display: none;">Sovereign Wealth Funds: Sovereign wealth funds support our investments in renewable energy, expanding our impact globally.</div>
             <h3>Sovereign Wealth Funds</h3>
         </div>
     </div>
+    
     
     <footer class="sitemap">
         <div class="sitemap-container">
@@ -152,5 +187,35 @@
           </nav>
         </div>
     </footer>
+
+    <script>
+        function flipper(imageId, textId) {
+            var image = document.getElementById(imageId);
+            var text = document.getElementById(textId);
+
+            image.addEventListener("click", function() {
+                if (image.style.display !== "none") {
+                    image.style.display = "none";
+                    text.style.display = "block";
+                }
+            });
+
+            text.addEventListener("click", function() {
+                if (text.style.display !== "none") {
+                    text.style.display = "none";
+                    image.style.display = "block";
+                }
+            });
+        }
+    
+        flipper("partner1", "partner1Text");
+        flipper("partner2", "partner2Text");
+        flipper("partner3", "partner3Text");
+        flipper("partner4", "partner4Text");
+        flipper("partner5", "partner5Text");
+        flipper("partner6", "partner6Text");
+    </script>
+    
+
 </body>
 </html>

@@ -1,12 +1,28 @@
+html, body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
+  margin: 0;
+}
+
+.main-content {
+  flex: 1; /* Fills the remaining space, ensuring that the footer stays at the bottom */
+  padding-bottom: 20px; /* Padding to ensure some spacing before the sitemap */
+}
+
 .sitemap {
   background-color: rgba(0, 50, 0, 0.8); /* Dark green background with transparency */
   color: white; /* White text color */
   padding: 20px; /* Padding around the sitemap */
   text-align: center; /* Center the text */
-  position: relative; /* Ensures it layers above the video */
-  z-index: 1;
   width: 100%;
   box-sizing: border-box;
+  z-index: 1; /* Ensures it layers above any background content */
+  margin-top: auto; /* Pushes the sitemap to the bottom */
 }
 
 .sitemap-title {
@@ -30,4 +46,12 @@
 
 .sitemap-link:hover {
   color: #ffcc00; /* Change color on hover */
-} 
+}
+
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+  .sitemap-link {
+    margin: 5px; /* Reduce space between links */
+  }
+}

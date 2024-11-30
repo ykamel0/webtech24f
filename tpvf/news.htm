@@ -1,3 +1,11 @@
+<!-- 
+Hi Professor,
+4.
+Please find on this page the slide show implemented using JavaScript.
+The function showSlides() is called when the page loads. This function hides all news items initially and then displays them one by one every 3 seconds.
+The currentIndex variable is used to keep track of the current news item being displayed.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,9 +102,30 @@
             padding: 10px;
         }
     </style>
+    <script type="text/javascript">
+        var newsItems = document.getElementsByClassName("news-item");
+        var currentIndex = 0;
+    
+        function showSlides() {
+            // Hide all news items initially
+            for (var i = 0; i < newsItems.length; i++) {
+                newsItems[i].style.display = "none";
+            }
+    
+            newsItems[currentIndex].style.display = "block";
+    
+            currentIndex++;
+            if (currentIndex >= newsItems.length) {
+                currentIndex = 0;
+            }
+    
+            setTimeout(showSlides, 3000);
+        };
+    </script>
+    
 </head>
 
-<body>
+<body onload="showSlides()">
     <div class="video-container">
         <video autoplay muted loop id="myVideo" width="1920" height="1080">
             <source src="allbg.mp4" type="video/mp4">
@@ -128,7 +157,7 @@
             </nav>
         </div>
 
-        <div>
+        <div class="main-content">
             <h1>Stay up-to-date with latest press</h1>
         </div>
 

@@ -1,3 +1,11 @@
+<!-- 
+Hi Professor,
+2.
+Please find on this page the text change implemented using JavaScript.
+The function chgTxt() changes the text of the paragraph with the id "note" when the user clicks on the text. 
+The text changes to a description of the renewable energy industry. The text is changed back to the original text when the user clicks on it again.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,14 +27,15 @@
 
         .description {
             background-color: rgba(211, 211, 211, 0.7);
-            height: 684px;
-            margin: 10px 15px 0 0;
-            width: 50%;
-            display: block;
+            margin-top: 100px;
+            padding: 50px 0;
+            margin-bottom: 50px;
+            box-sizing: border-box;
+            max-width: 800px;
         }
 
         .description img {
-            padding: 70px 25px 25px 70px;
+            padding: 40px 25px 25px 70px;
             height: 100px;
             margin: 0 auto;
         }
@@ -67,9 +76,6 @@
             z-index: -100; /* Keep the video behind other content */
             background-size: cover;
         }
-
-
-        /*below goes the styling of the changing side note. i want it to be side by side with the active equity description div*/
 
         p#note {
             font-size: 15px;
@@ -117,14 +123,21 @@
 
         @media (max-width: 800px) {
             .content-wrapper {
-                flex-direction: column; /* Stack vertically on small screens */
+                flex-direction: column;
             }
             .description, .action-container {
-                max-width: 100%; /* Full width on smaller screens */
+                max-width: 100%;
             }
         }
         
     </style>
+    <script>
+        function chgTxt() {
+            var noteElement = document.getElementById("note");
+            noteElement.innerText = "Renewable energy continues to grow globally, driven by market forces, sustainability demands, and supportive government policies. As technology advances and costs decrease, renewable energy becomes an increasingly attractive solution for both businesses and households looking to reduce their environmental impact.";
+        }
+    </script>
+    
 </head>
 
 <body>
@@ -171,7 +184,7 @@
     </div>
     <div class="action-container">
         <h2>Navigating the Energy Transition</h2>
-        <p id="note">The US renewables industry is shifting like never before. Macro trends, world-leading subsidies, and soaring energy
+        <p id="note" onclick="chgTxt()">The US renewables industry is shifting like never before. Macro trends, world-leading subsidies, and soaring energy
             demand from the AI boom have pushed an already increasing sector into new territory, making it the most attractive
             renewable industry globally. With experience in over $4bn of renewable energy investments, our team has the
             expertise to simplify the process.
