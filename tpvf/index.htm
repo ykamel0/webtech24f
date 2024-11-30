@@ -1,9 +1,35 @@
 <!-- 
 Hi Professor,
-2.
-Please find on this page the text change implemented using JavaScript.
+
+1. Please find on about.htm page the style change implemented using JavaScript.
+The function toggleStyle() changes the background color of the page from white to light gray and vice versa when the user clicks on the text.
+
+2. Please find on index.htm page the text change implemented using JavaScript.
 The function chgTxt() changes the text of the paragraph with the id "note" when the user clicks on the text. 
 The text changes to a description of the renewable energy industry. The text is changed back to the original text when the user clicks on it again.
+
+3. Please find on Contact.htm page the form validation implemented using JavaScript.
+The function validate() is used to validate the form fields. The function is called when the user submits the form.
+The function checks if the necessary fields are not empty. If they are empty, the form background color is changed to lightcoral, and an alert is displayed to the user.
+If the fields are filled out, the form background color is changed to lightgreen to indicate successful submission, and an alert is displayed to the user with the submitted information.
+
+4. Please find on news.htm page the slide show implemented using JavaScript.
+The function showSlides() is called when the page loads. This function hides all news items initially and then displays them one by one every 3 seconds.
+The currentIndex variable is used to keep track of the current news item being displayed.
+
+5. Please find on about.htm page the animation implemented using JavaScript.
+The function animateImg() moves the firm's president image left and right back and forth within -100px, 100px limits.
+
+6. Please find on partner.htm page the effect implemented using JavaScript with conditional statements.
+The function flipper() is used to switch between displaying an image and displaying descriptive text upon clicking. When the image is clicked, it is hidden, and the corresponding text is shown, and vice versa.
+I placed the script at the end of the body to ensure that the loading sequence is valid.
+
+7. Please find on Contact.htm page the additional javaScript functionality implemented using conditional statements.
+The functions general() and investor() are used to display the appropriate form based on the user's selection/input
+
+jQuery: Please find on this page the jQuery effects implemented using the Flipster plugin.
+The Flipster plugin is used to create a carousel of cards displaying the services offered by the company, Active Equity Group.
+Another jQuery effect is implemented to create a hover effect on the cards, fading them in and out when the user hovers over them.
 -->
 
 <!DOCTYPE html>
@@ -158,7 +184,6 @@ The text changes to a description of the renewable energy industry. The text is 
                 <li>
                     <a class="dropdown">About Us</a>
                     <ul class="dropdown-menu">
-                        <li><a href="team.htm">Team</a></li>
                         <li><a href="about.htm">Mission</a></li>
                         <li><a href="services.htm">Services</a></li>
                     </ul>
@@ -167,7 +192,6 @@ The text changes to a description of the renewable energy industry. The text is 
                 <li><a href="partner.htm">Partner</a></li>
                 <li><a href="contact.htm" target="_blank">Contact Us</a></li>
                 <li><a href="credits.htm">Credits</a></li>
-                <!-- Find the credits page in the sitemap -->
             </ul>
         </nav>
     </div>

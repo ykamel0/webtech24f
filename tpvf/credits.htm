@@ -13,14 +13,18 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
+        background-image: url('solarpanels.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
     .credits-container {
         max-width: 800px;
         margin: 50px auto;
-        padding: 20px;
+        padding: 20px 40px;
         background-color: white;
+        border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
@@ -38,13 +42,32 @@
         color: #007BFF;
         text-decoration: none;
     }
-
-    a:hover {
-        text-decoration: underline;
-    }
 </style>
 
 <body>
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="index.htm">
+                <img src="aeg.png" alt="Active Equity Logo" id="aeghome">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a class="dropdown">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.htm">Mission</a></li>
+                        <li><a href="services.htm">Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.htm">News</a></li>
+                <li><a href="partner.htm">Partner</a></li>
+                <li><a href="contact.htm">Contact Us</a></li>
+                <li><a href="credits.htm">Credits</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="credits-container">
         <h1>Credits</h1>
         <p>This website was built with inspiration and information from the following source:</p>
@@ -58,5 +81,20 @@
             the completion of this work. I have read the term project instructions and have observed all the restrictions and
             limitations specified therein.</p>
     </div>
+
+    <footer class="sitemap">
+        <div class="sitemap-container">
+            <h2 class="sitemap-title">Sitemap</h2>
+            <nav class="sitemap-nav">
+                <a href="index.htm" class="sitemap-link">Home</a>
+                <a href="about.htm" class="sitemap-link">About Us</a>
+                <a href="services.htm" class="sitemap-link">Services</a>
+                <a href="news.htm" class="sitemap-link">News</a>
+                <a href="partner.htm" class="sitemap-link">Partner</a>
+                <a href="contact.htm" class="sitemap-link">Contact Us</a>
+                <a href="credits.htm" class="sitemap-link">Credits</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>

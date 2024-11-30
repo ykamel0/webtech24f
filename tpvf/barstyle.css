@@ -47,6 +47,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: green;
     color: white;
+    text-decoration: none;
 }
 
 .active-link {
