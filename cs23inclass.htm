@@ -9,7 +9,7 @@
 
 	<style>
 	/* Your styles go here */
-        p#p1 {display:none; background-color:magenta; margin-left:200px;}
+        p#p1 {display:none; background-color:magenta; margin-right:600px;}
         img {margin-right:50px; width:200px; height:150px;}
 
         .blue {color:navy; text-decoration:underline; font-weight:bold;}
@@ -20,31 +20,8 @@
     
 	<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
 	<!-- /* Your JavaScript goes here */ -->
-    <script>
-        $(function() {
-          $("h1#h11").click (function(){
-            $("h2#h21").css ("color", "red");
-            $("h2#h22").css ({"color":"navy", "font-style":"italic", "font-family":"Arial"});
-          });
 
-        $("h2#h23").click(function() {
-          $("h2#h24").toggle(); // instead of hide and show, we replace with toggle
-        });
-        // $("h2#h23").dblclick(function(){
-        //   $("h2#h24").show();
-        // });
 
-        $("h1#h12").click(function() {
-          $("p#p1").slideToggle();
-        });
-
-        $("img").mouseover(function() {
-          $(this).width(400).height(300)
-        });
-
-        $("img").mouseout(function() {
-          $(this).width(200).height(150)
-        });        
 	</script>
   </head>
 
@@ -53,16 +30,44 @@
 	
 	
 	<!-- Start Exercise 1 here -->
+  <script>
+    $(function() {
+      $("h1#h11").click (function(){
+        $("h2#h21").css ("color", "red");
+        $("h2#h22").css ({"color":"navy", "font-style":"italic", "font-family":"Arial"});
+      });
+    });
+  </script>
+
 	<h1 id="h11"> Basics of jQuery</h1>
 	<h2 id="h21"> This exercise introduces you to using simple jQuery functions</h2>
 	<h2 id="h22"> It also teaches you the basics of jQuery</h2>
 
 	<!-- Start Exercise 2 here -->
+  <script>
+  $(document).ready(function() {
+    $("h2#h23").click(function() {
+      $("h2#h24").toggle(); // instead of hide and show, we replace with toggle
+    });
+
+    // $("h2#h23").dblclick(function(){
+    //   $("h2#h24").show();
+    // });
+  });
+  </script>
+  
     <h2 id="h23">When you click on me .....</h2>
     <h2 id="h24">I will disappear</h2>
 	
 	<!-- Start Exercise 3 Here -->
-	<h1 id="h12">More About Tigers</h1>
+  <script>
+    $("h1#h13").click( function () 
+    {
+      $("p#p1").slideToggle();
+    });
+  </script>
+
+	<h1 id="h13">More About Tigers</h1>
 	<p id="p1">
         In the past, tigers were found throughout Asia, from the Caucasus and the Caspian Sea to Siberia and the Indonesian islands of Java, Bali and Sumatra. 
         Fossil remains indicate tigers were also present in Borneo and Palawan in the Philippines during the late Pleistocene and Holocene.[74][75]
@@ -75,21 +80,63 @@
 	</p>
 
 	<!-- Start Exercise 4 Here -->
-    <img src="baldeagle1.jpg" alt="Sitting Eagle" title="Bald Eagle Sitting"/>
-    <img src="baldeagle2.jpg" alt="Flying Eagle" title="Bald Eagle Flying"/>
-       
+  <script>
+    $(document).ready(function() {
+      $("img").mouseover(function() {
+        $(this).width(600).height(400);
+      });
+
+      $("img").mouseout(function() {
+        $(this).width(300).height(200);
+      });
+    });
+  </script>
+
+  <img id="img1" src="baldeagle1.jpg" alt="Sitting Eagle" title="Bald Eagle Sitting"/>
+  <img id="img2" src="baldeagle2.jpg" alt="Flying Eagle" title="Bald Eagle Flying"/>  
 
 	<!-- Start Exercise 5 here -->
 
-    <h2 id="h25">This is some cool stuff with classes and jquery</h2>
-    <h2 id="h26">This is more cool stuff with classes and jquery</h2>
+  <h2 id="h25">This is the first</h2>
+  <h2 id="h26">This is the second</h2>
 
-    
+
+  <script>
+    $("h2#h25").click(function() {
+        $(this).removeClass();
+        $(this).addClass("red");
+        $("h2#h26").removeClass();
+        $("h2#h26").addClass("green");
+      });
+
+    $("h2#h26").click(function() {
+        $("h2#h25").removeClass();
+        $("h2#h25").addClass("green");
+        $(this).removeClass();
+        $(this).addClass("red");
+      });
+  </script>
 	
 
 	<!-- Use the same two images for Exercise 6. -->
-
-   
+  <img id="img3" src="usa.jpg" alt="USA Map Here" title="Map of USA"/>
 	
-  </body>
+  <script>
+  // $("img#img3").click ( function () {
+  //     $("img#img3").attr("src", "flag.jpg");
+  //   });
+
+  $("img#img3").click ( function () {
+      if ( $(this).attr("src") == "usa.jpg") {
+        $(this).attr("src", "flag.jpg");
+              }
+            else
+              {
+        $(this).attr("src", "usa.jpg");
+             }
+        });
+  </script>
+
+
+</body>
 </html>
